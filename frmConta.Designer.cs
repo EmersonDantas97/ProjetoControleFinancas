@@ -275,6 +275,7 @@ namespace Gestor
             this.txtObservacao.Name = "txtObservacao";
             this.txtObservacao.Size = new System.Drawing.Size(618, 20);
             this.txtObservacao.TabIndex = 5;
+            this.txtObservacao.Leave += new System.EventHandler(this.txtObservacao_Leave);
             // 
             // lblObservacao
             // 
@@ -316,6 +317,7 @@ namespace Gestor
             this.txtConta.Name = "txtConta";
             this.txtConta.Size = new System.Drawing.Size(463, 20);
             this.txtConta.TabIndex = 0;
+            this.txtConta.Leave += new System.EventHandler(this.txtConta_Leave);
             // 
             // lblValor
             // 

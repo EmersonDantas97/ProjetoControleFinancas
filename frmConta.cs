@@ -21,9 +21,9 @@ namespace Gestor
 
             #region Carregando opções de cartão
             cmbCartao.Items.Clear();
-            cmbCartao.Items.Add("NU BANK");
-            cmbCartao.Items.Add("WILL BANK");
-            cmbCartao.Items.Add("C6 BANK");
+            cmbCartao.Items.Add("NU");
+            cmbCartao.Items.Add("WILL");
+            cmbCartao.Items.Add("C6");
             #endregion
 
             #region Carregando opções de parcelamento
@@ -36,10 +36,11 @@ namespace Gestor
 
             #region Carregando opções de tipo de conta
             cmbTipoConta.Items.Clear();
-            cmbTipoConta.Items.Add("Farmácia".ToUpper());
-            cmbTipoConta.Items.Add("Mercado".ToUpper());
-            cmbTipoConta.Items.Add("Combustível".ToUpper());
-            cmbTipoConta.Items.Add("Lazer".ToUpper());
+            cmbTipoConta.Items.Add("FARMÁCIA".ToUpper());
+            cmbTipoConta.Items.Add("MERCADO".ToUpper());
+            cmbTipoConta.Items.Add("COMBUSTÍVEL".ToUpper());
+            cmbTipoConta.Items.Add("LAZER".ToUpper());
+            cmbTipoConta.Items.Add("FIXA");
             #endregion
         }
 
@@ -64,7 +65,7 @@ namespace Gestor
         /// </summary>
         /// <returns></returns>
         public string DataAtual()
-        { 
+        {
             return DateTime.Today.ToString("d");
         }
 
@@ -125,12 +126,14 @@ namespace Gestor
         {
             if (!(txtValor.Text == ""))
             {
-
                 string a = txtValor.Text;
 
-                double valor = Convert.ToDouble(a);
+                double vlrTemp;
 
-                txtValor.Text = valor.ToString("C");
+                if (double.TryParse(a, out vlrTemp))
+                {
+                    txtValor.Text = vlrTemp.ToString("F");
+                }
             }
 
         }
@@ -176,6 +179,16 @@ namespace Gestor
 
             for (int i = 1; i <= Convert.ToInt32(cmbParcelaAtual.Text); i++)
                 cmbQtdeParcelas.Items.Add(i.ToString());
+        }
+
+        private void txtConta_Leave(object sender, EventArgs e)
+        {
+            txtConta.Text = txtConta.Text.ToUpper();
+        }
+
+        private void txtObservacao_Leave(object sender, EventArgs e)
+        {
+            txtObservacao.Text = txtObservacao.Text.ToUpper();
         }
     }
 }
