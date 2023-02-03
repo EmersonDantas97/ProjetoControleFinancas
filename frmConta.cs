@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace Gestor
 {
@@ -145,7 +138,7 @@ namespace Gestor
 
         public void novoCadastro()
         {
-            txtCodigo.Text = "000000";
+            txtCodigo.Text = "000001";
             txtDataLancamento.Text = DateTime.Now.ToString();
             txtDataEmissao.Text = DataAtual();
             txtDataPagar.Text = DataAtual();
@@ -173,14 +166,6 @@ namespace Gestor
             this.Close();
         }
 
-        private void cmbParcelaAtual_Leave(object sender, EventArgs e)
-        {
-            cmbQtdeParcelas.Items.Clear();
-
-            for (int i = 1; i <= Convert.ToInt32(cmbParcelaAtual.Text); i++)
-                cmbQtdeParcelas.Items.Add(i.ToString());
-        }
-
         private void txtConta_Leave(object sender, EventArgs e)
         {
             txtConta.Text = txtConta.Text.ToUpper();
@@ -189,6 +174,52 @@ namespace Gestor
         private void txtObservacao_Leave(object sender, EventArgs e)
         {
             txtObservacao.Text = txtObservacao.Text.ToUpper();
+        }
+
+        private void bntSalvar_Click(object sender, EventArgs e)
+        {
+            Conta.Unit c = new Conta.Unit();
+
+            c.ConfirmarDepois = false;
+
+            c.Id = Convert.ToInt32(txtCodigo.Text);
+            c.DataLancamento = txtDataLancamento.Text;
+            c.NomeConta = txtConta.Text;
+            c.TipoConta = cmbTipoConta.Text;
+            c.DataEmissao = txtDataEmissao.Text;
+            c.DataPagar = txtDataPagar.Text;
+            c.Observacao = txtObservacao.Text;
+
+            c.QtdParcelas = cmbQtdeParcelas.SelectedIndex;
+            c.ParcelaAtual = cmbParcelaAtual.SelectedIndex;
+            c.Cartao = cmbCartao.SelectedIndex;
+
+            if (rdbCredito.Checked)
+                c.TipoPagamento = 1;
+            if (rdbDebito.Checked)
+                c.TipoPagamento = 0;
+            if (rdbDinheiro.Checked)
+                c.TipoPagamento = 2;
+
+            if (chkLancamentoIncerto.Checked)
+                c.ConfirmarDepois = true;
+
+            if (rdbEventual.Checked)
+                c.Duracao = 0;
+            if (rdbFixa.Checked)
+                c.Duracao = 1;
+            if (rdbParcelada.Checked)
+                c.Duracao = 2;
+
+            string varJson = Conta.SerializarClasseUnit(c);
+
+            Fichario f = new Fichario("D:\\FINANCAS\\GestorDados");
+
+            f.Incluir(c.Id.ToString(),varJson);
+
+            novoCadastro();
+
+            MessageBox.Show("Conta salva com sucesso!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
