@@ -30,3 +30,6 @@ D:\EMERSON\Programacao\Gestor\obj\Debug\Gestor.csproj.GenerateResource.cache
 D:\EMERSON\Programacao\Gestor\obj\Debug\Gestor.csproj.CoreCompileInputs.cache
 D:\EMERSON\Programacao\Gestor\obj\Debug\Gestor.exe
 D:\EMERSON\Programacao\Gestor\obj\Debug\Gestor.pdb
+D:\EMERSON\Programacao\Gestor\bin\Debug\Newtonsoft.Json.dll
+D:\EMERSON\Programacao\Gestor\bin\Debug\Newtonsoft.Json.xml
+D:\EMERSON\Programacao\Gestor\obj\Debug\Gestor.csproj.CopyComplete

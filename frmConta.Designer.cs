@@ -35,6 +35,7 @@ namespace Gestor
             this.lblDataLancamento = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.grpInformacoesGerais = new System.Windows.Forms.GroupBox();
+            this.chkLancamentoIncerto = new System.Windows.Forms.CheckBox();
             this.grpPagamento = new System.Windows.Forms.GroupBox();
             this.rdbDebito = new System.Windows.Forms.RadioButton();
             this.rdbDinheiro = new System.Windows.Forms.RadioButton();
@@ -96,7 +97,6 @@ namespace Gestor
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Enabled = false;
             this.txtCodigo.Location = new System.Drawing.Point(11, 38);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(150, 20);
@@ -122,6 +122,7 @@ namespace Gestor
             // 
             // grpInformacoesGerais
             // 
+            this.grpInformacoesGerais.Controls.Add(this.chkLancamentoIncerto);
             this.grpInformacoesGerais.Controls.Add(this.grpPagamento);
             this.grpInformacoesGerais.Controls.Add(this.grpDuracao);
             this.grpInformacoesGerais.Controls.Add(this.txtDataPagar);
@@ -138,17 +139,27 @@ namespace Gestor
             this.grpInformacoesGerais.Controls.Add(this.lblConta);
             this.grpInformacoesGerais.Location = new System.Drawing.Point(12, 89);
             this.grpInformacoesGerais.Name = "grpInformacoesGerais";
-            this.grpInformacoesGerais.Size = new System.Drawing.Size(634, 223);
+            this.grpInformacoesGerais.Size = new System.Drawing.Size(634, 247);
             this.grpInformacoesGerais.TabIndex = 4;
             this.grpInformacoesGerais.TabStop = false;
             this.grpInformacoesGerais.Text = "INFORMAÇÕES GERAIS";
+            // 
+            // chkLancamentoIncerto
+            // 
+            this.chkLancamentoIncerto.AutoSize = true;
+            this.chkLancamentoIncerto.Location = new System.Drawing.Point(125, 155);
+            this.chkLancamentoIncerto.Name = "chkLancamentoIncerto";
+            this.chkLancamentoIncerto.Size = new System.Drawing.Size(409, 17);
+            this.chkLancamentoIncerto.TabIndex = 20;
+            this.chkLancamentoIncerto.Text = "LANÇAMENTO INCERTO, CONFIRMAR INFORMAÇÕES POSTERIORMENTE.";
+            this.chkLancamentoIncerto.UseVisualStyleBackColor = true;
             // 
             // grpPagamento
             // 
             this.grpPagamento.Controls.Add(this.rdbDebito);
             this.grpPagamento.Controls.Add(this.rdbDinheiro);
             this.grpPagamento.Controls.Add(this.rdbCredito);
-            this.grpPagamento.Location = new System.Drawing.Point(317, 156);
+            this.grpPagamento.Location = new System.Drawing.Point(302, 183);
             this.grpPagamento.Name = "grpPagamento";
             this.grpPagamento.Size = new System.Drawing.Size(249, 47);
             this.grpPagamento.TabIndex = 19;
@@ -197,7 +208,7 @@ namespace Gestor
             this.grpDuracao.Controls.Add(this.rdbEventual);
             this.grpDuracao.Controls.Add(this.rdbParcelada);
             this.grpDuracao.Controls.Add(this.rdbFixa);
-            this.grpDuracao.Location = new System.Drawing.Point(48, 156);
+            this.grpDuracao.Location = new System.Drawing.Point(46, 183);
             this.grpDuracao.Name = "grpDuracao";
             this.grpDuracao.Size = new System.Drawing.Size(251, 47);
             this.grpDuracao.TabIndex = 6;
@@ -305,9 +316,9 @@ namespace Gestor
             // 
             // txtValor
             // 
-            this.txtValor.Location = new System.Drawing.Point(477, 38);
+            this.txtValor.Location = new System.Drawing.Point(480, 38);
             this.txtValor.Name = "txtValor";
-            this.txtValor.Size = new System.Drawing.Size(151, 20);
+            this.txtValor.Size = new System.Drawing.Size(148, 20);
             this.txtValor.TabIndex = 1;
             this.txtValor.Leave += new System.EventHandler(this.txtValor_Leave);
             // 
@@ -315,14 +326,14 @@ namespace Gestor
             // 
             this.txtConta.Location = new System.Drawing.Point(8, 38);
             this.txtConta.Name = "txtConta";
-            this.txtConta.Size = new System.Drawing.Size(463, 20);
+            this.txtConta.Size = new System.Drawing.Size(466, 20);
             this.txtConta.TabIndex = 0;
             this.txtConta.Leave += new System.EventHandler(this.txtConta_Leave);
             // 
             // lblValor
             // 
             this.lblValor.AutoSize = true;
-            this.lblValor.Location = new System.Drawing.Point(474, 21);
+            this.lblValor.Location = new System.Drawing.Point(477, 21);
             this.lblValor.Name = "lblValor";
             this.lblValor.Size = new System.Drawing.Size(43, 13);
             this.lblValor.TabIndex = 1;
@@ -346,7 +357,7 @@ namespace Gestor
             this.grpInformacoesAdicionais.Controls.Add(this.lblQtdeParcelas);
             this.grpInformacoesAdicionais.Controls.Add(this.lblParcelaAtual);
             this.grpInformacoesAdicionais.Enabled = false;
-            this.grpInformacoesAdicionais.Location = new System.Drawing.Point(12, 318);
+            this.grpInformacoesAdicionais.Location = new System.Drawing.Point(12, 342);
             this.grpInformacoesAdicionais.Name = "grpInformacoesAdicionais";
             this.grpInformacoesAdicionais.Size = new System.Drawing.Size(634, 78);
             this.grpInformacoesAdicionais.TabIndex = 11;
@@ -368,7 +379,6 @@ namespace Gestor
             this.cmbParcelaAtual.Name = "cmbParcelaAtual";
             this.cmbParcelaAtual.Size = new System.Drawing.Size(92, 21);
             this.cmbParcelaAtual.TabIndex = 20;
-            this.cmbParcelaAtual.Leave += new System.EventHandler(this.cmbParcelaAtual_Leave);
             // 
             // cmbCartao
             // 
@@ -413,6 +423,7 @@ namespace Gestor
             this.bntSalvar.TabIndex = 12;
             this.bntSalvar.Text = "SALVAR";
             this.bntSalvar.UseVisualStyleBackColor = true;
+            this.bntSalvar.Click += new System.EventHandler(this.bntSalvar_Click);
             // 
             // btnSair
             // 
@@ -447,7 +458,7 @@ namespace Gestor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(659, 411);
+            this.ClientSize = new System.Drawing.Size(659, 431);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.bntLimpar);
             this.Controls.Add(this.btnSair);
@@ -511,6 +522,7 @@ namespace Gestor
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Button bntLimpar;
         private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.CheckBox chkLancamentoIncerto;
     }
 }
 
