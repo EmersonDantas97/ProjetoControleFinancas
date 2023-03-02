@@ -16,7 +16,7 @@ namespace Gestor
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmContas());
+            Application.Run(new frmMenuPrincipal());
         }
     }
 }

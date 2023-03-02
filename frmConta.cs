@@ -138,7 +138,10 @@ namespace Gestor
 
         public void novoCadastro()
         {
-            txtCodigo.Text = "000001";
+
+            string codigo = DateTime.Now.ToString().Replace(" ","").Replace("/", "").Replace(":","");
+
+            txtCodigo.Text = codigo;
             txtDataLancamento.Text = DateTime.Now.ToString();
             txtDataEmissao.Text = DataAtual();
             txtDataPagar.Text = DataAtual();
@@ -182,7 +185,7 @@ namespace Gestor
 
             c.ConfirmarDepois = false;
 
-            c.Id = Convert.ToInt32(txtCodigo.Text);
+            c.Id = txtCodigo.Text;
             c.DataLancamento = txtDataLancamento.Text;
             c.NomeConta = txtConta.Text;
             c.TipoConta = cmbTipoConta.Text;
