@@ -33,3 +33,4 @@ D:\EMERSON\Programacao\Gestor\obj\Debug\Gestor.pdb
 D:\EMERSON\Programacao\Gestor\bin\Debug\Newtonsoft.Json.dll
 D:\EMERSON\Programacao\Gestor\bin\Debug\Newtonsoft.Json.xml
 D:\EMERSON\Programacao\Gestor\obj\Debug\Gestor.csproj.CopyComplete
+D:\EMERSON\Programacao\Gestor\obj\Debug\Gestor.frmMenuPrincipal.resources
