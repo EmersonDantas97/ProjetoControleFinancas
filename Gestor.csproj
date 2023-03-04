@@ -72,6 +72,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Classes\Util.cs" />
     <EmbeddedResource Include="frmConta.resx">
       <DependentUpon>frmConta.cs</DependentUpon>
     </EmbeddedResource>

@@ -181,9 +181,20 @@ namespace Gestor
 
         private void bntSalvar_Click(object sender, EventArgs e)
         {
+            Conta.Unit c = LeituraFormulario();
+
+            c.SalvarConta();
+
+            MessageBox.Show("Conta salva com sucesso!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            novoCadastro();
+        }
+
+        Conta.Unit LeituraFormulario()
+        {
             Conta.Unit c = new Conta.Unit();
 
-            c.ConfirmarDepois = false;
+            c.ConfirmarDepois = 0;
 
             c.Id = txtCodigo.Text;
             c.DataLancamento = txtDataLancamento.Text;
@@ -205,7 +216,9 @@ namespace Gestor
                 c.TipoPagamento = 2;
 
             if (chkLancamentoIncerto.Checked)
-                c.ConfirmarDepois = true;
+                c.ConfirmarDepois = 1;
+            else
+                c.ConfirmarDepois = 0;
 
             if (rdbEventual.Checked)
                 c.Duracao = 0;
@@ -214,15 +227,7 @@ namespace Gestor
             if (rdbParcelada.Checked)
                 c.Duracao = 2;
 
-            string varJson = Conta.SerializarClasseUnit(c);
-
-            Fichario f = new Fichario("D:\\FINANCAS\\GestorDados");
-
-            f.Incluir(c.Id.ToString(),varJson);
-
-            novoCadastro();
-
-            MessageBox.Show("Conta salva com sucesso!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            return c;
         }
     }
 }
