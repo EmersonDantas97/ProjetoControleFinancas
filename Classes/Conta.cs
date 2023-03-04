@@ -26,7 +26,7 @@ namespace Gestor
             public string DataEmissao { get; set; }
             public string DataPagar { get; set; }
             public string Observacao { get; set; }
-            public bool ConfirmarDepois { get; set; }
+            public int ConfirmarDepois { get; set; }
 
             [Required(ErrorMessage = "Obrigatório ter o DURAÇÃO da conta!")]
             public int Duracao { get; set; }
@@ -67,6 +67,13 @@ namespace Gestor
                 }
             }
 
+            string verificaultimocodigo()
+            {
+                string codigo;
+
+                return codigo;
+            }
+
             string ToInsert()
             {
                 string SQL;
@@ -88,12 +95,12 @@ namespace Gestor
                     $", '{Util.FormataData(this.DataEmissao, "yyyy-MM-dd")}'" +
                     $", {this.ConfirmarDepois}" +
                     $", {this.ValorConta}" +
-                    $", {this.NomeConta}" +
+                    $", '{this.NomeConta}'" +
                     $", {this.QtdParcelas}" +
                     $", {this.ParcelaAtual}" +
                     $", '{this.TipoConta}'" +
-                    $", '{this.DataLancamento}'" +
-                    $", '{this.DataPagar}'" +
+                    $", '{Util.FormataData(this.DataLancamento, "yyyy-MM-dd  HH:mm:ss.fff")}'" +
+                    $", '{Util.FormataData(this.DataPagar, "yyyy-MM-dd")}'" +
                     $", '{this.Observacao}'" +
                     $", {this.TipoPagamento}" +
                     $", {this.Duracao}" +

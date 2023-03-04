@@ -194,7 +194,7 @@ namespace Gestor
         {
             Conta.Unit c = new Conta.Unit();
 
-            c.ConfirmarDepois = false;
+            c.ConfirmarDepois = 0;
 
             c.Id = txtCodigo.Text;
             c.DataLancamento = txtDataLancamento.Text;
@@ -216,7 +216,9 @@ namespace Gestor
                 c.TipoPagamento = 2;
 
             if (chkLancamentoIncerto.Checked)
-                c.ConfirmarDepois = true;
+                c.ConfirmarDepois = 1;
+            else
+                c.ConfirmarDepois = 0;
 
             if (rdbEventual.Checked)
                 c.Duracao = 0;
