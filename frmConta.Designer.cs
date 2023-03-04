@@ -139,7 +139,7 @@ namespace Gestor
             this.grpInformacoesGerais.Controls.Add(this.lblConta);
             this.grpInformacoesGerais.Location = new System.Drawing.Point(12, 89);
             this.grpInformacoesGerais.Name = "grpInformacoesGerais";
-            this.grpInformacoesGerais.Size = new System.Drawing.Size(634, 247);
+            this.grpInformacoesGerais.Size = new System.Drawing.Size(634, 260);
             this.grpInformacoesGerais.TabIndex = 4;
             this.grpInformacoesGerais.TabStop = false;
             this.grpInformacoesGerais.Text = "INFORMAÇÕES GERAIS";
@@ -147,7 +147,7 @@ namespace Gestor
             // chkLancamentoIncerto
             // 
             this.chkLancamentoIncerto.AutoSize = true;
-            this.chkLancamentoIncerto.Location = new System.Drawing.Point(125, 155);
+            this.chkLancamentoIncerto.Location = new System.Drawing.Point(137, 174);
             this.chkLancamentoIncerto.Name = "chkLancamentoIncerto";
             this.chkLancamentoIncerto.Size = new System.Drawing.Size(409, 17);
             this.chkLancamentoIncerto.TabIndex = 20;
@@ -159,7 +159,7 @@ namespace Gestor
             this.grpPagamento.Controls.Add(this.rdbDebito);
             this.grpPagamento.Controls.Add(this.rdbDinheiro);
             this.grpPagamento.Controls.Add(this.rdbCredito);
-            this.grpPagamento.Location = new System.Drawing.Point(302, 183);
+            this.grpPagamento.Location = new System.Drawing.Point(314, 202);
             this.grpPagamento.Name = "grpPagamento";
             this.grpPagamento.Size = new System.Drawing.Size(249, 47);
             this.grpPagamento.TabIndex = 19;
@@ -208,7 +208,7 @@ namespace Gestor
             this.grpDuracao.Controls.Add(this.rdbEventual);
             this.grpDuracao.Controls.Add(this.rdbParcelada);
             this.grpDuracao.Controls.Add(this.rdbFixa);
-            this.grpDuracao.Location = new System.Drawing.Point(46, 183);
+            this.grpDuracao.Location = new System.Drawing.Point(58, 202);
             this.grpDuracao.Name = "grpDuracao";
             this.grpDuracao.Size = new System.Drawing.Size(251, 47);
             this.grpDuracao.TabIndex = 6;
@@ -283,8 +283,9 @@ namespace Gestor
             // txtObservacao
             // 
             this.txtObservacao.Location = new System.Drawing.Point(10, 123);
+            this.txtObservacao.Multiline = true;
             this.txtObservacao.Name = "txtObservacao";
-            this.txtObservacao.Size = new System.Drawing.Size(618, 20);
+            this.txtObservacao.Size = new System.Drawing.Size(618, 45);
             this.txtObservacao.TabIndex = 5;
             this.txtObservacao.Leave += new System.EventHandler(this.txtObservacao_Leave);
             // 
@@ -357,9 +358,9 @@ namespace Gestor
             this.grpInformacoesAdicionais.Controls.Add(this.lblQtdeParcelas);
             this.grpInformacoesAdicionais.Controls.Add(this.lblParcelaAtual);
             this.grpInformacoesAdicionais.Enabled = false;
-            this.grpInformacoesAdicionais.Location = new System.Drawing.Point(12, 342);
+            this.grpInformacoesAdicionais.Location = new System.Drawing.Point(12, 355);
             this.grpInformacoesAdicionais.Name = "grpInformacoesAdicionais";
-            this.grpInformacoesAdicionais.Size = new System.Drawing.Size(634, 78);
+            this.grpInformacoesAdicionais.Size = new System.Drawing.Size(634, 70);
             this.grpInformacoesAdicionais.TabIndex = 11;
             this.grpInformacoesAdicionais.TabStop = false;
             this.grpInformacoesAdicionais.Text = "INFORMAÇÕES ADICIONAIS";
@@ -458,7 +459,7 @@ namespace Gestor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(659, 431);
+            this.ClientSize = new System.Drawing.Size(659, 436);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.bntLimpar);
             this.Controls.Add(this.btnSair);
