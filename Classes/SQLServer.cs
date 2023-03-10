@@ -2,18 +2,19 @@
 using System.Data;
 using System.Data.SqlClient;
 
+
 namespace Gestor.Classes
 {
     public class SQLServer
     {
-        string stringConexao;
-        SqlConnection Conexao;
+        public string stringConexao;
+        public SqlConnection Conexao;
 
         public SQLServer()
         {
             try
             {
-                stringConexao = "Data Source=DESKTOP-7TLUK34;Initial Catalog=ByteBank;Persist Security Info=True;User ID=sa;Password=bispo1997";
+                stringConexao = "Data Source=DESKTOP-7TLUK34;Initial Catalog=ACGestor;Persist Security Info=True;User ID=sa;Password=bispo1997";
                 Conexao = new SqlConnection(stringConexao);
                 Conexao.Open();
             }
@@ -48,7 +49,8 @@ namespace Gestor.Classes
             try
             {
                 var myCommand = new SqlCommand(SQL, Conexao);
-                myCommand.ExecuteReader();
+                myCommand.CommandTimeout = 0;
+                var myReader = myCommand.ExecuteReader();
                 return "";
             }
             catch (Exception ex)
