@@ -29,11 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.aCGestorDataSet = new Gestor.ACGestorDataSet();
-            this.aCGestorDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tblContaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tblContaTableAdapter = new Gestor.ACGestorDataSetTableAdapters.tblContaTableAdapter();
+            this.dgv_ListagemContas = new System.Windows.Forms.DataGridView();
             this.cntIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cntDataEmissaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cntLancamentoIncertoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,21 +44,25 @@
             this.cntFormaPgtoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cntDuracaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cntDescricaoCartaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aCGestorDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aCGestorDataSetBindingSource)).BeginInit();
+            this.tblContaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aCGestorDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aCGestorDataSet = new Gestor.ACGestorDataSet();
+            this.tblContaTableAdapter = new Gestor.ACGestorDataSetTableAdapters.tblContaTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ListagemContas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblContaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aCGestorDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aCGestorDataSet)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgv_ListagemContas
             // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgv_ListagemContas.AllowUserToOrderColumns = true;
+            this.dgv_ListagemContas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_ListagemContas.AutoGenerateColumns = false;
+            this.dgv_ListagemContas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_ListagemContas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cntIdDataGridViewTextBoxColumn,
             this.cntDataEmissaoDataGridViewTextBoxColumn,
             this.cntLancamentoIncertoDataGridViewTextBoxColumn,
@@ -77,30 +77,14 @@
             this.cntFormaPgtoDataGridViewTextBoxColumn,
             this.cntDuracaoDataGridViewTextBoxColumn,
             this.cntDescricaoCartaoDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.tblContaBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(11, 63);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(776, 375);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // aCGestorDataSet
-            // 
-            this.aCGestorDataSet.DataSetName = "ACGestorDataSet";
-            this.aCGestorDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // aCGestorDataSetBindingSource
-            // 
-            this.aCGestorDataSetBindingSource.DataSource = this.aCGestorDataSet;
-            this.aCGestorDataSetBindingSource.Position = 0;
-            // 
-            // tblContaBindingSource
-            // 
-            this.tblContaBindingSource.DataMember = "tblConta";
-            this.tblContaBindingSource.DataSource = this.aCGestorDataSetBindingSource;
-            // 
-            // tblContaTableAdapter
-            // 
-            this.tblContaTableAdapter.ClearBeforeFill = true;
+            this.dgv_ListagemContas.DataSource = this.tblContaBindingSource;
+            this.dgv_ListagemContas.Location = new System.Drawing.Point(11, 63);
+            this.dgv_ListagemContas.Name = "dgv_ListagemContas";
+            this.dgv_ListagemContas.ReadOnly = true;
+            this.dgv_ListagemContas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_ListagemContas.Size = new System.Drawing.Size(776, 375);
+            this.dgv_ListagemContas.TabIndex = 0;
+            this.dgv_ListagemContas.DoubleClick += new System.EventHandler(this.dgv_ListagemContas_DoubleClick);
             // 
             // cntIdDataGridViewTextBoxColumn
             // 
@@ -186,27 +170,46 @@
             this.cntDescricaoCartaoDataGridViewTextBoxColumn.HeaderText = "Cartão";
             this.cntDescricaoCartaoDataGridViewTextBoxColumn.Name = "cntDescricaoCartaoDataGridViewTextBoxColumn";
             // 
+            // tblContaBindingSource
+            // 
+            this.tblContaBindingSource.DataMember = "tblConta";
+            this.tblContaBindingSource.DataSource = this.aCGestorDataSetBindingSource;
+            // 
+            // aCGestorDataSetBindingSource
+            // 
+            this.aCGestorDataSetBindingSource.DataSource = this.aCGestorDataSet;
+            this.aCGestorDataSetBindingSource.Position = 0;
+            // 
+            // aCGestorDataSet
+            // 
+            this.aCGestorDataSet.DataSetName = "ACGestorDataSet";
+            this.aCGestorDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblContaTableAdapter
+            // 
+            this.tblContaTableAdapter.ClearBeforeFill = true;
+            // 
             // frmContasLancadas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv_ListagemContas);
             this.Name = "frmContasLancadas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Contas Lançadas";
             this.Load += new System.EventHandler(this.frmContasLancadas_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aCGestorDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aCGestorDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ListagemContas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblContaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aCGestorDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aCGestorDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_ListagemContas;
         private System.Windows.Forms.BindingSource aCGestorDataSetBindingSource;
         private ACGestorDataSet aCGestorDataSet;
         private System.Windows.Forms.BindingSource tblContaBindingSource;

@@ -30,11 +30,13 @@ namespace Gestor.Classes
 
             try
             {
-                var myCommand = new SqlCommand(SQL);
+                var myCommand = new SqlCommand(SQL, Conexao);
                 myCommand.CommandTimeout = 0;
 
                 var myReader = myCommand.ExecuteReader();
+
                 dt.Load(myReader);
+
             }
             catch (Exception ex)
             {

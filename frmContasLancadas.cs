@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Gestor
@@ -19,8 +12,19 @@ namespace Gestor
 
         private void frmContasLancadas_Load(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'aCGestorDataSet.tblConta'. Você pode movê-la ou removê-la conforme necessário.
             this.tblContaTableAdapter.Fill(this.aCGestorDataSet.tblConta);
+
+        }
+
+        private void dgv_ListagemContas_DoubleClick(object sender, EventArgs e)
+        {
+
+            DataGridViewRow Linha = new DataGridViewRow();
+            Linha = dgv_ListagemContas.SelectedRows[0];
+
+            string id = Linha.Cells[0].Value.ToString();
+
+            MessageBox.Show(id.ToString());
 
         }
     }

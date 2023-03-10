@@ -62,7 +62,7 @@
             this.contasToolStripMenuItem.Name = "contasToolStripMenuItem";
             this.contasToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.C)));
             this.contasToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
-            this.contasToolStripMenuItem.Text = "Contas";
+            this.contasToolStripMenuItem.Text = "&Contas";
             this.contasToolStripMenuItem.Click += new System.EventHandler(this.contasToolStripMenuItem_Click);
             // 
             // recebimentoToolStripMenuItem
@@ -70,21 +70,24 @@
             this.recebimentoToolStripMenuItem.Name = "recebimentoToolStripMenuItem";
             this.recebimentoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.R)));
             this.recebimentoToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
-            this.recebimentoToolStripMenuItem.Text = "Recebimento";
+            this.recebimentoToolStripMenuItem.Text = "&Recebimento";
             // 
             // relatoriosToolStripMenuItem
             // 
             this.relatoriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.contasLançadasToolStripMenuItem});
             this.relatoriosToolStripMenuItem.Name = "relatoriosToolStripMenuItem";
+            this.relatoriosToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.L)));
             this.relatoriosToolStripMenuItem.Size = new System.Drawing.Size(83, 20);
             this.relatoriosToolStripMenuItem.Text = "Visualização";
+            //this.relatoriosToolStripMenuItem.Click += new System.EventHandler(this.relatoriosToolStripMenuItem_Click);
             // 
             // contasLançadasToolStripMenuItem
             // 
             this.contasLançadasToolStripMenuItem.Name = "contasLançadasToolStripMenuItem";
-            this.contasLançadasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.contasLançadasToolStripMenuItem.Text = "Contas Lançadas";
+            this.contasLançadasToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.L)));
+            this.contasLançadasToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.contasLançadasToolStripMenuItem.Text = "Contas &Lançadas";
             this.contasLançadasToolStripMenuItem.Click += new System.EventHandler(this.contasLançadasToolStripMenuItem_Click);
             // 
             // frmMenuPrincipal

@@ -139,7 +139,7 @@ namespace Gestor
         public void novoCadastro()
         {
 
-            string codigo = DateTime.Now.ToString().Replace(" ","").Replace("/", "").Replace(":","");
+            string codigo = Conta.Unit.UltimoCodigo();
 
             txtCodigo.Text = codigo;
             txtDataLancamento.Text = DateTime.Now.ToString();
@@ -190,6 +190,42 @@ namespace Gestor
             novoCadastro();
         }
 
+        public void PreencheFormulario(Conta.Unit c)
+        {
+            // TODO: FAZER ROTINA.
+
+            this.txtCodigo.Text = c.Id;
+            this.txtDataLancamento.Text = c.DataLancamento;
+            this.txtConta.Text = c.NomeConta;
+            this.txtValor.Text = c.ValorConta;
+            this.cmbTipoConta.Text = c.TipoConta;
+            this.txtObservacao.Text = c.Observacao;
+
+            if (c.Duracao == 0)
+                rdbEventual.Checked = true;
+            if (c.Duracao == 1)
+                rdbFixa.Checked = true;
+            if (c.Duracao == 2)
+                rdbParcelada.Checked = true;
+
+            if (c.TipoPagamento == 1)
+                rdbCredito.Checked = true;
+            if (c.TipoPagamento == 0)
+                rdbDebito.Checked = true;
+            if (c.TipoPagamento == 2)
+                rdbDinheiro.Checked = true;
+
+            if (c.ConfirmarDepois == 1)
+                chkLancamentoIncerto.Checked = true;
+            else
+                chkLancamentoIncerto.Checked = false;
+
+            if (c.Cartao != "-1")
+                cmbCartao.Text = c.Cartao;
+
+
+        }
+
         Conta.Unit LeituraFormulario()
         {
             var c = new Conta.Unit();
@@ -207,28 +243,33 @@ namespace Gestor
             
             c.QtdParcelas = cmbQtdeParcelas.SelectedIndex;
             c.ParcelaAtual = cmbParcelaAtual.SelectedIndex;
-            c.Cartao = cmbCartao.SelectedIndex;
+            c.Cartao = cmbCartao.Text;
 
-            if (rdbCredito.Checked)
-                c.TipoPagamento = 1;
-            if (rdbDebito.Checked)
-                c.TipoPagamento = 0;
-            if (rdbDinheiro.Checked)
-                c.TipoPagamento = 2;
+                if (rdbCredito.Checked)
+                    c.TipoPagamento = 1;
+                if (rdbDebito.Checked)
+                    c.TipoPagamento = 0;
+                if (rdbDinheiro.Checked)
+                    c.TipoPagamento = 2;
 
-            if (chkLancamentoIncerto.Checked)
-                c.ConfirmarDepois = 1;
-            else
-                c.ConfirmarDepois = 0;
+                if (chkLancamentoIncerto.Checked)
+                    c.ConfirmarDepois = 1;
+                else
+                    c.ConfirmarDepois = 0;
 
-            if (rdbEventual.Checked)
-                c.Duracao = 0;
-            if (rdbFixa.Checked)
-                c.Duracao = 1;
-            if (rdbParcelada.Checked)
-                c.Duracao = 2;
+                if (rdbEventual.Checked)
+                    c.Duracao = 0;
+                if (rdbFixa.Checked)
+                    c.Duracao = 1;
+                if (rdbParcelada.Checked)
+                    c.Duracao = 2;
 
             return c;
+        }
+
+        private void txtCodigo_Leave(object sender, EventArgs e)
+        {
+            PreencheFormulario(Conta.Unit.Buscar(this.txtCodigo.Text));
         }
     }
 }
