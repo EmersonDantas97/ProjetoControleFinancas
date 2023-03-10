@@ -33,6 +33,7 @@
             this.contasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recebimentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatoriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contasLançadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,9 +74,18 @@
             // 
             // relatoriosToolStripMenuItem
             // 
+            this.relatoriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.contasLançadasToolStripMenuItem});
             this.relatoriosToolStripMenuItem.Name = "relatoriosToolStripMenuItem";
             this.relatoriosToolStripMenuItem.Size = new System.Drawing.Size(83, 20);
             this.relatoriosToolStripMenuItem.Text = "Visualização";
+            // 
+            // contasLançadasToolStripMenuItem
+            // 
+            this.contasLançadasToolStripMenuItem.Name = "contasLançadasToolStripMenuItem";
+            this.contasLançadasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.contasLançadasToolStripMenuItem.Text = "Contas Lançadas";
+            this.contasLançadasToolStripMenuItem.Click += new System.EventHandler(this.contasLançadasToolStripMenuItem_Click);
             // 
             // frmMenuPrincipal
             // 
@@ -104,5 +114,6 @@
         private System.Windows.Forms.ToolStripMenuItem contasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem recebimentoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem relatoriosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem contasLançadasToolStripMenuItem;
     }
 }

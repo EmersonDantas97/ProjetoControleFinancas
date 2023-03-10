@@ -183,7 +183,7 @@ namespace Gestor
         {
             Conta.Unit c = LeituraFormulario();
 
-            c.SalvarConta();
+            c.Salvar();
 
             MessageBox.Show("Conta salva com sucesso!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -192,7 +192,7 @@ namespace Gestor
 
         Conta.Unit LeituraFormulario()
         {
-            Conta.Unit c = new Conta.Unit();
+            var c = new Conta.Unit();
 
             c.ConfirmarDepois = 0;
 
@@ -203,7 +203,8 @@ namespace Gestor
             c.DataEmissao = txtDataEmissao.Text;
             c.DataPagar = txtDataPagar.Text;
             c.Observacao = txtObservacao.Text;
-
+            c.ValorConta = txtValor.Text.Replace(",",".");
+            
             c.QtdParcelas = cmbQtdeParcelas.SelectedIndex;
             c.ParcelaAtual = cmbParcelaAtual.SelectedIndex;
             c.Cartao = cmbCartao.SelectedIndex;

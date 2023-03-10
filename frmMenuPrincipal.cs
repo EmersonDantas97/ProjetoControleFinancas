@@ -23,5 +23,12 @@ namespace Gestor
             f.MdiParent = this;
             f.Show();
         }
+
+        private void contasLançadasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmContasLancadas f = new frmContasLancadas();
+            f.MdiParent = this;
+            f.Show();
+        }
     }
 }
