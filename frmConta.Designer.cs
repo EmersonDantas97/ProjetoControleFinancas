@@ -455,6 +455,7 @@ namespace Gestor
             this.btnExcluir.TabIndex = 15;
             this.btnExcluir.Text = "EXCLUIR";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // frmContas
             // 

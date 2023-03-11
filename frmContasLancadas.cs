@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Gestor.Classes;
+using System;
 using System.Windows.Forms;
+
 
 namespace Gestor
 {
@@ -8,12 +10,19 @@ namespace Gestor
         public frmContasLancadas()
         {
             InitializeComponent();
+            
+            CarregaGrid();
         }
 
         private void frmContasLancadas_Load(object sender, EventArgs e)
         {
-            this.tblContaTableAdapter.Fill(this.aCGestorDataSet.tblConta);
 
+        }
+
+        public void CarregaGrid()
+        {
+            dgv_ListagemContas.DataSource = null; // Limpar
+            dgv_ListagemContas.DataSource = Conta.Unit.BuscarContas(); // Carregando contas na grid.
         }
 
         private void dgv_ListagemContas_DoubleClick(object sender, EventArgs e)
