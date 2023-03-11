@@ -30,5 +30,6 @@ namespace Gestor
             f.MdiParent = this;
             f.Show();
         }
+
     }
 }

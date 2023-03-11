@@ -101,6 +101,7 @@ namespace Gestor
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(150, 20);
             this.txtCodigo.TabIndex = 15;
+            this.txtCodigo.Leave += new System.EventHandler(this.txtCodigo_Leave);
             // 
             // lblDataLancamento
             // 
@@ -147,7 +148,7 @@ namespace Gestor
             // chkLancamentoIncerto
             // 
             this.chkLancamentoIncerto.AutoSize = true;
-            this.chkLancamentoIncerto.Location = new System.Drawing.Point(137, 174);
+            this.chkLancamentoIncerto.Location = new System.Drawing.Point(137, 176);
             this.chkLancamentoIncerto.Name = "chkLancamentoIncerto";
             this.chkLancamentoIncerto.Size = new System.Drawing.Size(409, 17);
             this.chkLancamentoIncerto.TabIndex = 20;
@@ -454,6 +455,7 @@ namespace Gestor
             this.btnExcluir.TabIndex = 15;
             this.btnExcluir.Text = "EXCLUIR";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // frmContas
             // 

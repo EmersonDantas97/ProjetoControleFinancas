@@ -139,12 +139,12 @@ namespace Gestor
         public void novoCadastro()
         {
 
-            string codigo = DateTime.Now.ToString().Replace(" ","").Replace("/", "").Replace(":","");
+            string codigo = Conta.Unit.UltimoCodigo();
 
             txtCodigo.Text = codigo;
             txtDataLancamento.Text = DateTime.Now.ToString();
             txtDataEmissao.Text = DataAtual();
-            txtDataPagar.Text = DataAtual();
+            txtDataPagar.Text = DateTime.Now.AddDays(30).ToString("d");
             txtConta.Text = "";
             txtValor.Text = "";
             txtObservacao.Text = "";
@@ -183,18 +183,55 @@ namespace Gestor
         {
             Conta.Unit c = LeituraFormulario();
 
+
             c.Salvar();
+
 
             MessageBox.Show("Conta salva com sucesso!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             novoCadastro();
         }
 
+        public void PreencheFormulario(Conta.Unit c)
+        {
+
+            this.txtCodigo.Text = c.Id;
+            this.txtDataLancamento.Text = c.DataLancamento;
+            this.txtConta.Text = c.NomeConta;
+            this.txtValor.Text = c.ValorConta;
+            this.cmbTipoConta.Text = c.TipoConta;
+            this.txtObservacao.Text = c.Observacao;
+
+            if (c.Duracao == "EVENTUAL")
+                rdbEventual.Checked = true;
+            if (c.Duracao == "FIXA")
+                rdbFixa.Checked = true;
+            if (c.Duracao == "PARCELADA")
+                rdbParcelada.Checked = true;
+
+            if (c.TipoPagamento == "CRÉDITO")
+                rdbCredito.Checked = true;
+            if (c.TipoPagamento == "DÉBITO")
+                rdbDebito.Checked = true;
+            if (c.TipoPagamento == "DINHEIRO")
+                rdbDinheiro.Checked = true;
+
+            if (c.ConfirmarDepois == "S")
+                chkLancamentoIncerto.Checked = true;
+            else
+                chkLancamentoIncerto.Checked = false;
+
+            if (c.Cartao != "-1")
+                cmbCartao.Text = c.Cartao;
+
+
+        }
+
         Conta.Unit LeituraFormulario()
         {
             var c = new Conta.Unit();
 
-            c.ConfirmarDepois = 0;
+            c.ConfirmarDepois = "N";
 
             c.Id = txtCodigo.Text;
             c.DataLancamento = txtDataLancamento.Text;
@@ -203,32 +240,63 @@ namespace Gestor
             c.DataEmissao = txtDataEmissao.Text;
             c.DataPagar = txtDataPagar.Text;
             c.Observacao = txtObservacao.Text;
-            c.ValorConta = txtValor.Text.Replace(",",".");
-            
-            c.QtdParcelas = cmbQtdeParcelas.SelectedIndex;
-            c.ParcelaAtual = cmbParcelaAtual.SelectedIndex;
-            c.Cartao = cmbCartao.SelectedIndex;
+            c.ValorConta = txtValor.Text.Replace(",", ".");
+
+            if (cmbQtdeParcelas.SelectedIndex == -1)
+                c.QtdParcelas = "0";
+            else
+                c.QtdParcelas = cmbQtdeParcelas.Text;
+
+            if (cmbParcelaAtual.SelectedIndex == -1)
+                c.ParcelaAtual = "0";
+            else
+                c.ParcelaAtual = cmbParcelaAtual.Text;
+
+            c.Cartao = cmbCartao.Text;
 
             if (rdbCredito.Checked)
-                c.TipoPagamento = 1;
+                c.TipoPagamento = "CRÉDITO";
             if (rdbDebito.Checked)
-                c.TipoPagamento = 0;
+                c.TipoPagamento = "DÉBITO";
             if (rdbDinheiro.Checked)
-                c.TipoPagamento = 2;
+                c.TipoPagamento = "DINHEIRO";
 
             if (chkLancamentoIncerto.Checked)
-                c.ConfirmarDepois = 1;
+                c.ConfirmarDepois = "S";
             else
-                c.ConfirmarDepois = 0;
+                c.ConfirmarDepois = "N";
 
             if (rdbEventual.Checked)
-                c.Duracao = 0;
+                c.Duracao = "EVENTUAL";
             if (rdbFixa.Checked)
-                c.Duracao = 1;
+                c.Duracao = "FIXA";
             if (rdbParcelada.Checked)
-                c.Duracao = 2;
+                c.Duracao = "PARCELADA";
 
             return c;
         }
+
+        private void txtCodigo_Leave(object sender, EventArgs e)
+        {
+            if (!(this.txtCodigo.Text == Conta.Unit.UltimoCodigo()))
+            {
+                PreencheFormulario(Conta.Unit.Buscar(this.txtCodigo.Text));
+            }
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            Conta.Unit.ExcluirConta(this.txtCodigo.Text);
+            MessageBox.Show("Registro excluido com sucesso!", "Exclusão", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            novoCadastro();
+        }
     }
 }
+
+// TODO 01: ADICIONAR MENU QUE SE ABRE COM O CLIQUE DO BOTÃO ESQUERDO. COLOCAR OPÇÕES:
+// 01. PAGAR, 01.1 REMOVER REMOVER PAGAMENTO, 02. EXCLUIR, 03. MOVER PRÓXIMO MÊS.
+
+// TODO 02: COLOCAR CHECK BOX PARA QUE SEJA CONCATENADO POR CARTÃO SOMANDO TODOS OS VALORES.
+
+// TODO 03: COLOCAR DISTINÇÃO DOS QUE PRECISAM AINDA DE CONFIRMAÇÃO.
+
