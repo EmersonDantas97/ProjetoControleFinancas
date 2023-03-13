@@ -144,7 +144,8 @@ namespace Gestor
             txtCodigo.Text = codigo;
             txtDataLancamento.Text = DateTime.Now.ToString();
             txtDataEmissao.Text = DataAtual();
-            txtDataPagar.Text = DateTime.Now.AddDays(30).ToString("d");
+            txtDataPagar.Text = DataAtual();
+            //txtDataPagar.Text = DateTime.Now.AddDays(30).ToString("d");
             txtConta.Text = "";
             txtValor.Text = "";
             txtObservacao.Text = "";
@@ -185,7 +186,6 @@ namespace Gestor
 
 
             c.Salvar();
-
 
             MessageBox.Show("Conta salva com sucesso!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

@@ -71,6 +71,7 @@
             this.recebimentoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.R)));
             this.recebimentoToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.recebimentoToolStripMenuItem.Text = "&Recebimento";
+            this.recebimentoToolStripMenuItem.Click += new System.EventHandler(this.recebimentoToolStripMenuItem_Click);
             // 
             // relatoriosToolStripMenuItem
             // 
@@ -80,7 +81,6 @@
             this.relatoriosToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.L)));
             this.relatoriosToolStripMenuItem.Size = new System.Drawing.Size(83, 20);
             this.relatoriosToolStripMenuItem.Text = "Visualização";
-            //this.relatoriosToolStripMenuItem.Click += new System.EventHandler(this.relatoriosToolStripMenuItem_Click);
             // 
             // contasLançadasToolStripMenuItem
             // 

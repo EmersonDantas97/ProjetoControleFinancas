@@ -57,3 +57,4 @@ D:\EMERSON\Programacao\Gestor\bin\Debug\System.Memory.xml
 D:\EMERSON\Programacao\Gestor\bin\Debug\System.Numerics.Vectors.xml
 D:\EMERSON\Programacao\Gestor\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 D:\EMERSON\Programacao\Gestor\obj\Debug\Gestor.frmContasLancadas.resources
+D:\EMERSON\Programacao\Gestor\obj\Debug\Gestor.frmRecebimentos.resources
