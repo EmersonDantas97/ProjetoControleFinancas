@@ -31,5 +31,11 @@ namespace Gestor
             f.Show();
         }
 
+        private void recebimentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRecebimentos f = new frmRecebimentos();
+            f.MdiParent = this;
+            f.Show();
+        }
     }
 }

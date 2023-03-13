@@ -71,16 +71,19 @@ namespace Gestor
             {
                 if (this.QtdParcelas == "0")
                 {
+                    string sql = this.ToInsert();
                     var db = new SQLServer();
-                    var retorno = db.SQLCommand(this.ToInsert());
+                    var retorno = db.SQLCommand(sql);
                     db.Close();
                 }
                 else
                 {
+                    
                     var db = new SQLServer();
                     for (int i = Convert.ToInt32(this.ParcelaAtual); i <= Convert.ToInt32(this.QtdParcelas); i++)
                     {
-                        var retorno = db.SQLCommand(this.ToInsert(i));
+                        string sql = this.ToInsert(i);
+                        db.SQLCommand(sql);
                     }
                     db.Close();
                 }
@@ -137,16 +140,16 @@ namespace Gestor
                     ", Cnt_Observacao" +
                     ", Cnt_FormaPgto" +
                     ", Cnt_Duracao" +
-                    $", Cnt_DescricaoCartao) values ('{this.Id}'" +
-                    $", '{Util.FormataData(this.DataEmissao, "yyyy-MM-dd")}'" +
+                    $", Cnt_DescricaoCartao) values ({this.Id}" +
+                    $", CONVERT(date, '{Util.FormataData(this.DataEmissao, "yyyy-dd-MM")}', 101)" +
                     $", '{this.ConfirmarDepois}'" +
                     $", {this.ValorConta}" +
                     $", '{this.NomeConta}'" +
                     $", {this.QtdParcelas}" +
                     $", {this.ParcelaAtual}" +
                     $", '{this.TipoConta}'" +
-                    $", '{Util.FormataData(this.DataLancamento, "yyyy-MM-dd  HH:mm:ss.fff")}'" +
-                    $", '{Util.FormataData(this.DataPagar, "yyyy-MM-dd")}'" +
+                    $", CONVERT(datetime, '{Util.FormataData(this.DataLancamento, "yyyy-dd-MM HH:mm:ss.fff")}', 101)" +
+                    $", CONVERT(date, '{Util.FormataData(this.DataPagar, "yyyy-dd-MM")}', 101)" +
                     $", '{this.Observacao.Trim()}'" +
                     $", '{this.TipoPagamento}'" +
                     $", '{this.Duracao}'" +
@@ -171,7 +174,7 @@ namespace Gestor
                     ", Cnt_Observacao" +
                     ", Cnt_FormaPgto" +
                     ", Cnt_Duracao" +
-                    $", Cnt_DescricaoCartao) values ('{Conta.Unit.UltimoCodigo()}'" +
+                    $", Cnt_DescricaoCartao) values ({Conta.Unit.UltimoCodigo()}" +
                     $", '{Util.FormataData(this.DataEmissao, "yyyy-MM-dd")}'" +
                     $", '{this.ConfirmarDepois}'" +
                     $", {this.ValorConta}" +
@@ -179,7 +182,7 @@ namespace Gestor
                     $", {this.QtdParcelas}" +
                     $", {qtdParcelas}" +
                     $", '{this.TipoConta}'" +
-                    $", '{Util.FormataData(this.DataLancamento, "yyyy-MM-dd  HH:mm:ss.fff")}'" +
+                    $", '{Util.FormataData(this.DataLancamento, "yyyy-MM-dd HH:mm:ss.fff")}'" +
                     $", '{Util.FormataData(this.DataPagar, "yyyy-MM-dd")}'" +
                     $", '{this.Observacao.Trim()}'" +
                     $", '{this.TipoPagamento}'" +
