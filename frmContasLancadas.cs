@@ -1,5 +1,4 @@
-﻿using Gestor.Classes;
-using System;
+﻿using System;
 using System.Windows.Forms;
 
 
@@ -10,7 +9,7 @@ namespace Gestor
         public frmContasLancadas()
         {
             InitializeComponent();
-            
+
             CarregaGrid();
         }
 

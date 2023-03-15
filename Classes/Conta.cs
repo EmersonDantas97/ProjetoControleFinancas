@@ -31,6 +31,19 @@ namespace Gestor
             {
             }
 
+            public bool ValidaClasse()
+            {
+                bool validacao = false;
+
+                if (this.Id != "")
+                    if (this.NomeConta != "")
+                        if (this.ValorConta != "")
+                            if (this.ValorConta != "")
+                                validacao = true;
+
+                return validacao;
+            }
+
             public static Unit Buscar(string id)
             {
                 Conta.Unit c = new Conta.Unit();
@@ -78,7 +91,7 @@ namespace Gestor
                 }
                 else
                 {
-                    
+
                     var db = new SQLServer();
                     for (int i = Convert.ToInt32(this.ParcelaAtual); i <= Convert.ToInt32(this.QtdParcelas); i++)
                     {
@@ -141,15 +154,15 @@ namespace Gestor
                     ", Cnt_FormaPgto" +
                     ", Cnt_Duracao" +
                     $", Cnt_DescricaoCartao) values ({this.Id}" +
-                    $", CONVERT(date, '{Util.FormataData(this.DataEmissao, "yyyy-dd-MM")}', 101)" +
+                    $", '{Util.FormataData(this.DataEmissao, "yyyy-MM-dd")}'" +
                     $", '{this.ConfirmarDepois}'" +
                     $", {this.ValorConta}" +
-                    $", '{this.NomeConta}'" +
+                    $", '{this.NomeConta.Trim()}'" +
                     $", {this.QtdParcelas}" +
                     $", {this.ParcelaAtual}" +
                     $", '{this.TipoConta}'" +
-                    $", CONVERT(datetime, '{Util.FormataData(this.DataLancamento, "yyyy-dd-MM HH:mm:ss.fff")}', 101)" +
-                    $", CONVERT(date, '{Util.FormataData(this.DataPagar, "yyyy-dd-MM")}', 101)" +
+                    $", GETDATE()" +
+                    $", '{Util.FormataData(this.DataPagar, "yyyy-MM-dd")}'" +
                     $", '{this.Observacao.Trim()}'" +
                     $", '{this.TipoPagamento}'" +
                     $", '{this.Duracao}'" +

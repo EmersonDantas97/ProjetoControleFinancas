@@ -19,5 +19,12 @@ namespace Gestor
 
             return temp.ToString(Formato);
         }
+
+        internal static string DataAtual()
+        {
+            return DateTime.Today.ToString("d");
+        }
+
+
     }
 }

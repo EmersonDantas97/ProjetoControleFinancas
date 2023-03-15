@@ -255,10 +255,12 @@
             this.ClientSize = new System.Drawing.Size(444, 351);
             this.Controls.Add(this.tblRecebimentosDataGridView);
             this.Controls.Add(this.tblRecebimentosBindingNavigator);
+            this.KeyPreview = true;
             this.Name = "frmRecebimentos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Recebimentos";
             this.Load += new System.EventHandler(this.frmRecebimentos_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmRecebimentos_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.aCGestorDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblRecebimentosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblRecebimentosBindingNavigator)).EndInit();
