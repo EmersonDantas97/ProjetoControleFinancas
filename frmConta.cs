@@ -35,6 +35,18 @@ namespace Gestor
             cmbTipoConta.Items.Add("LAZER".ToUpper());
             cmbTipoConta.Items.Add("FIXA");
             #endregion
+
+            #region Dica de ferramenta para os botões
+
+            ToolTip dicaFerramenta = new ToolTip(); // Instanciando classe ToolTip para ser criadas as dicas de ferramentas.
+            dicaFerramenta.SetToolTip(btnSalvar, "Tecla de atalho F1"); // Criando dica de ferramenta para o botão.
+            dicaFerramenta.SetToolTip(btnSair, "Tecla de atalho F2"); // Criando dica de ferramenta para o botão.
+            dicaFerramenta.SetToolTip(btnLimpar, "Tecla de atalho F3"); // Criando dica de ferramenta para o botão.
+            dicaFerramenta.SetToolTip(btnExcluir, "Tecla de atalho F4"); // Criando dica de ferramenta para o botão.
+
+
+            #endregion
+
         }
 
 
@@ -53,14 +65,6 @@ namespace Gestor
             habilitaCampos();
         }
 
-        /// <summary>
-        /// String criada para retornar a data atual.
-        /// </summary>
-        /// <returns></returns>
-        public string DataAtual()
-        {
-            return DateTime.Today.ToString("d");
-        }
 
         void habilitaCampos()
         {
@@ -143,9 +147,9 @@ namespace Gestor
 
             txtCodigo.Text = codigo;
             txtDataLancamento.Text = DateTime.Now.ToString();
-            txtDataEmissao.Text = DataAtual();
-            txtDataPagar.Text = DataAtual();
-            //txtDataPagar.Text = DateTime.Now.AddDays(30).ToString("d");
+            txtDataLancamento.Text = "";
+            txtDataEmissao.Text = Util.DataAtual();
+            txtDataPagar.Text = DateTime.Now.AddDays(30).ToString("d");
             txtConta.Text = "";
             txtValor.Text = "";
             txtObservacao.Text = "";
@@ -184,12 +188,16 @@ namespace Gestor
         {
             Conta.Unit c = LeituraFormulario();
 
-
-            c.Salvar();
-
-            MessageBox.Show("Conta salva com sucesso!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            novoCadastro();
+            if (c.ValidaClasse())
+            {
+                c.Salvar();
+                MessageBox.Show("Conta salva com sucesso!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                novoCadastro();
+            }
+            else
+            {
+                MessageBox.Show("Para proceder com o salvamento da conta, é necessário pelo menos preencher as informações: Id, Nome da Conta e Valor da Conta.", "Impossível salvar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         public void PreencheFormulario(Conta.Unit c)
@@ -289,6 +297,26 @@ namespace Gestor
             Conta.Unit.ExcluirConta(this.txtCodigo.Text);
             MessageBox.Show("Registro excluido com sucesso!", "Exclusão", MessageBoxButtons.OK, MessageBoxIcon.Information);
             novoCadastro();
+        }
+
+        private void frmContas_KeyDown(object sender, KeyEventArgs e) // Quando pressionado alguma tecla do formulario, este evento será acionado.
+        {
+
+            if (e.KeyCode == Keys.Escape) // Comparando se a tecla que foi pressionada é igual ao parâmetro passado.
+                this.Close(); // Comando para Fechar a aplicação.
+
+            if (e.KeyCode == Keys.F1) // Comparando se a tecla que foi pressionada é igual ao parâmetro passado.
+                this.btnSalvar.PerformClick(); // Chamando o evento de clique no botão.
+
+            if (e.KeyCode == Keys.F2) // Comparando se a tecla que foi pressionada é igual ao parâmetro passado.
+                this.btnSair.PerformClick();// Chamando o evento de clique no botão.
+
+            if (e.KeyCode == Keys.F3) // Comparando se a tecla que foi pressionada é igual ao parâmetro passado.
+                this.btnLimpar.PerformClick();// Chamando o evento de clique no botão.
+
+            if (e.KeyCode == Keys.F4) // Comparando se a tecla que foi pressionada é igual ao parâmetro passado.
+                this.btnExcluir.PerformClick();// Chamando o evento de clique no botão.
+
         }
     }
 }

@@ -63,9 +63,9 @@ namespace Gestor
             this.lblCartao = new System.Windows.Forms.Label();
             this.lblQtdeParcelas = new System.Windows.Forms.Label();
             this.lblParcelaAtual = new System.Windows.Forms.Label();
-            this.bntSalvar = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
-            this.bntLimpar = new System.Windows.Forms.Button();
+            this.btnLimpar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.grpRegistro.SuspendLayout();
             this.grpInformacoesGerais.SuspendLayout();
@@ -417,15 +417,15 @@ namespace Gestor
             this.lblParcelaAtual.TabIndex = 0;
             this.lblParcelaAtual.Text = "PARCELA ATUAL";
             // 
-            // bntSalvar
+            // btnSalvar
             // 
-            this.bntSalvar.Location = new System.Drawing.Point(345, 19);
-            this.bntSalvar.Name = "bntSalvar";
-            this.bntSalvar.Size = new System.Drawing.Size(70, 64);
-            this.bntSalvar.TabIndex = 12;
-            this.bntSalvar.Text = "SALVAR";
-            this.bntSalvar.UseVisualStyleBackColor = true;
-            this.bntSalvar.Click += new System.EventHandler(this.bntSalvar_Click);
+            this.btnSalvar.Location = new System.Drawing.Point(345, 19);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(70, 64);
+            this.btnSalvar.TabIndex = 12;
+            this.btnSalvar.Text = "SALVAR";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.bntSalvar_Click);
             // 
             // btnSair
             // 
@@ -437,15 +437,15 @@ namespace Gestor
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
-            // bntLimpar
+            // btnLimpar
             // 
-            this.bntLimpar.Location = new System.Drawing.Point(497, 19);
-            this.bntLimpar.Name = "bntLimpar";
-            this.bntLimpar.Size = new System.Drawing.Size(70, 64);
-            this.bntLimpar.TabIndex = 14;
-            this.bntLimpar.Text = "LIMPAR";
-            this.bntLimpar.UseVisualStyleBackColor = true;
-            this.bntLimpar.Click += new System.EventHandler(this.bntLimpar_Click);
+            this.btnLimpar.Location = new System.Drawing.Point(497, 19);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(70, 64);
+            this.btnLimpar.TabIndex = 14;
+            this.btnLimpar.Text = "LIMPAR";
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.bntLimpar_Click);
             // 
             // btnExcluir
             // 
@@ -463,15 +463,17 @@ namespace Gestor
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(659, 436);
             this.Controls.Add(this.btnExcluir);
-            this.Controls.Add(this.bntLimpar);
+            this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnSair);
-            this.Controls.Add(this.bntSalvar);
+            this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.grpInformacoesAdicionais);
             this.Controls.Add(this.grpInformacoesGerais);
             this.Controls.Add(this.grpRegistro);
+            this.KeyPreview = true;
             this.Name = "frmContas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CONTAS A PAGAR";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmContas_KeyDown);
             this.grpRegistro.ResumeLayout(false);
             this.grpRegistro.PerformLayout();
             this.grpInformacoesGerais.ResumeLayout(false);
@@ -521,9 +523,9 @@ namespace Gestor
         private System.Windows.Forms.RadioButton rdbEventual;
         private System.Windows.Forms.ComboBox cmbQtdeParcelas;
         private System.Windows.Forms.ComboBox cmbParcelaAtual;
-        private System.Windows.Forms.Button bntSalvar;
+        private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnSair;
-        private System.Windows.Forms.Button bntLimpar;
+        private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.CheckBox chkLancamentoIncerto;
     }
