@@ -34,9 +34,6 @@
             this.aCGestorDataSet = new Gestor.ACGestorDataSet();
             this.tblContaTableAdapter = new Gestor.ACGestorDataSetTableAdapters.tblContaTableAdapter();
             this.dgv_ListagemContas = new System.Windows.Forms.DataGridView();
-            this.tblCartaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tblCartaoTableAdapter = new Gestor.ACGestorDataSetTableAdapters.tblCartaoTableAdapter();
-            this.tblContaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.cntIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cntNomeContaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cntValorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,12 +48,15 @@
             this.cntObservacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cntFormaPgtoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cntDuracaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tblContaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.tblCartaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tblCartaoTableAdapter = new Gestor.ACGestorDataSetTableAdapters.tblCartaoTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.tblContaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCGestorDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCGestorDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ListagemContas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblCartaoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblContaBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblCartaoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tblContaBindingSource
@@ -87,6 +87,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_ListagemContas.AutoGenerateColumns = false;
+            this.dgv_ListagemContas.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgv_ListagemContas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_ListagemContas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cntIdDataGridViewTextBoxColumn,
@@ -104,25 +105,13 @@
             this.cntFormaPgtoDataGridViewTextBoxColumn,
             this.cntDuracaoDataGridViewTextBoxColumn});
             this.dgv_ListagemContas.DataSource = this.tblContaBindingSource1;
+            this.dgv_ListagemContas.GridColor = System.Drawing.SystemColors.ButtonShadow;
             this.dgv_ListagemContas.Location = new System.Drawing.Point(12, 12);
             this.dgv_ListagemContas.Name = "dgv_ListagemContas";
             this.dgv_ListagemContas.ReadOnly = true;
             this.dgv_ListagemContas.Size = new System.Drawing.Size(775, 426);
             this.dgv_ListagemContas.TabIndex = 0;
-            // 
-            // tblCartaoBindingSource
-            // 
-            this.tblCartaoBindingSource.DataMember = "tblCartao";
-            this.tblCartaoBindingSource.DataSource = this.aCGestorDataSetBindingSource;
-            // 
-            // tblCartaoTableAdapter
-            // 
-            this.tblCartaoTableAdapter.ClearBeforeFill = true;
-            // 
-            // tblContaBindingSource1
-            // 
-            this.tblContaBindingSource1.DataMember = "tblConta";
-            this.tblContaBindingSource1.DataSource = this.aCGestorDataSetBindingSource;
+            this.dgv_ListagemContas.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dgv_ListagemContas_MouseDown);
             // 
             // cntIdDataGridViewTextBoxColumn
             // 
@@ -222,22 +211,37 @@
             this.cntDuracaoDataGridViewTextBoxColumn.Name = "cntDuracaoDataGridViewTextBoxColumn";
             this.cntDuracaoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // tblContaBindingSource1
+            // 
+            this.tblContaBindingSource1.DataMember = "tblConta";
+            this.tblContaBindingSource1.DataSource = this.aCGestorDataSetBindingSource;
+            // 
+            // tblCartaoBindingSource
+            // 
+            this.tblCartaoBindingSource.DataMember = "tblCartao";
+            this.tblCartaoBindingSource.DataSource = this.aCGestorDataSetBindingSource;
+            // 
+            // tblCartaoTableAdapter
+            // 
+            this.tblCartaoTableAdapter.ClearBeforeFill = true;
+            // 
             // frmContasLancadas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dgv_ListagemContas);
+            this.KeyPreview = true;
             this.Name = "frmContasLancadas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Contas Lançadas";
-            this.Load += new System.EventHandler(this.frmContasLancadas_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmContasLancadas_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.tblContaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCGestorDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCGestorDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ListagemContas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblCartaoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblContaBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblCartaoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -91,14 +91,13 @@ namespace Gestor
                 }
                 else
                 {
-
-                    var db = new SQLServer();
                     for (int i = Convert.ToInt32(this.ParcelaAtual); i <= Convert.ToInt32(this.QtdParcelas); i++)
                     {
+                        var db = new SQLServer();
                         string sql = this.ToInsert(i);
                         db.SQLCommand(sql);
+                        db.Close();
                     }
-                    db.Close();
                 }
 
             }
@@ -110,6 +109,13 @@ namespace Gestor
                 dt = db.SQLQuery("SELECT * FROM tblConta;");
                 db.Close();
                 return dt;
+            }
+
+            public static void MudaStatusConta(string status, string codigoConta)
+            {
+                SQLServer db = new SQLServer();
+                db.SQLCommand($"UPDATE tblConta SET Cnt_Status = {status} WHERE Cnt_id = {codigoConta};");
+                db.Close();
             }
 
             public static void ExcluirConta(string id)
@@ -174,6 +180,8 @@ namespace Gestor
             {
                 string SQL;
 
+                string ultimocodigo = Conta.Unit.UltimoCodigo();
+
                 SQL = "insert into dbo.tblConta (Cnt_Id" +
                     ", Cnt_DataEmissao" +
                     ", Cnt_LancamentoIncerto" +
@@ -187,15 +195,15 @@ namespace Gestor
                     ", Cnt_Observacao" +
                     ", Cnt_FormaPgto" +
                     ", Cnt_Duracao" +
-                    $", Cnt_DescricaoCartao) values ({Conta.Unit.UltimoCodigo()}" +
+                    $", Cnt_DescricaoCartao) values ({ultimocodigo}" +
                     $", '{Util.FormataData(this.DataEmissao, "yyyy-MM-dd")}'" +
                     $", '{this.ConfirmarDepois}'" +
                     $", {this.ValorConta}" +
-                    $", '{this.NomeConta}'" +
+                    $", '{this.NomeConta.Trim()}'" +
                     $", {this.QtdParcelas}" +
                     $", {qtdParcelas}" +
                     $", '{this.TipoConta}'" +
-                    $", '{Util.FormataData(this.DataLancamento, "yyyy-MM-dd HH:mm:ss.fff")}'" +
+                    $", GETDATE()" +
                     $", '{Util.FormataData(this.DataPagar, "yyyy-MM-dd")}'" +
                     $", '{this.Observacao.Trim()}'" +
                     $", '{this.TipoPagamento}'" +
