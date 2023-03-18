@@ -297,6 +297,7 @@ namespace Gestor
             Conta.Unit.ExcluirConta(this.txtCodigo.Text);
             MessageBox.Show("Registro excluido com sucesso!", "Exclusão", MessageBoxButtons.OK, MessageBoxIcon.Information);
             novoCadastro();
+            
         }
 
         private void frmContas_KeyDown(object sender, KeyEventArgs e) // Quando pressionado alguma tecla do formulario, este evento será acionado.

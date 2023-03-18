@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenuPrincipal));
             this.mnuPrincipal = new System.Windows.Forms.MenuStrip();
             this.cadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,6 +60,7 @@
             // 
             // contasToolStripMenuItem
             // 
+            this.contasToolStripMenuItem.Image = global::Gestor.Properties.Resources.conta;
             this.contasToolStripMenuItem.Name = "contasToolStripMenuItem";
             this.contasToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.C)));
             this.contasToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
@@ -67,6 +69,7 @@
             // 
             // recebimentoToolStripMenuItem
             // 
+            this.recebimentoToolStripMenuItem.Image = global::Gestor.Properties.Resources.Recebimento;
             this.recebimentoToolStripMenuItem.Name = "recebimentoToolStripMenuItem";
             this.recebimentoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.R)));
             this.recebimentoToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
@@ -84,6 +87,7 @@
             // 
             // contasLançadasToolStripMenuItem
             // 
+            this.contasLançadasToolStripMenuItem.Image = global::Gestor.Properties.Resources.Visualizacao;
             this.contasLançadasToolStripMenuItem.Name = "contasLançadasToolStripMenuItem";
             this.contasLançadasToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.L)));
             this.contasLançadasToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
@@ -97,6 +101,7 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.mnuPrincipal);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.KeyPreview = true;
             this.MainMenuStrip = this.mnuPrincipal;

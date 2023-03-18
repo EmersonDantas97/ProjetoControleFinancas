@@ -108,7 +108,7 @@
             this.tblRecebimentosBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.tblRecebimentosBindingNavigator.Name = "tblRecebimentosBindingNavigator";
             this.tblRecebimentosBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.tblRecebimentosBindingNavigator.Size = new System.Drawing.Size(444, 25);
+            this.tblRecebimentosBindingNavigator.Size = new System.Drawing.Size(443, 25);
             this.tblRecebimentosBindingNavigator.TabIndex = 0;
             this.tblRecebimentosBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -221,7 +221,7 @@
             this.tblRecebimentosDataGridView.Location = new System.Drawing.Point(0, 25);
             this.tblRecebimentosDataGridView.Name = "tblRecebimentosDataGridView";
             this.tblRecebimentosDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tblRecebimentosDataGridView.Size = new System.Drawing.Size(444, 326);
+            this.tblRecebimentosDataGridView.Size = new System.Drawing.Size(443, 326);
             this.tblRecebimentosDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -252,9 +252,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(444, 351);
+            this.ClientSize = new System.Drawing.Size(443, 351);
             this.Controls.Add(this.tblRecebimentosDataGridView);
             this.Controls.Add(this.tblRecebimentosBindingNavigator);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "frmRecebimentos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

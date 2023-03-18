@@ -38,6 +38,9 @@
   <PropertyGroup>
     <StartupObject>Gestor.Program</StartupObject>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Imagens\Gestor.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Crypto, Version=1.9.0.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
       <HintPath>packages\Portable.BouncyCastle.1.9.0\lib\net40\BouncyCastle.Crypto.dll</HintPath>
@@ -101,43 +104,43 @@
     </Compile>
     <Compile Include="Classes\SQLServer.cs" />
     <Compile Include="Classes\Conta.cs" />
-    <Compile Include="frmConta.cs">
+    <Compile Include="Formularios\frmConta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmConta.Designer.cs">
+    <Compile Include="Formularios\frmConta.Designer.cs">
       <DependentUpon>frmConta.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmContasLancadas.cs">
+    <Compile Include="Formularios\frmContasLancadas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmContasLancadas.Designer.cs">
+    <Compile Include="Formularios\frmContasLancadas.Designer.cs">
       <DependentUpon>frmContasLancadas.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMenuPrincipal.cs">
+    <Compile Include="Formularios\frmMenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMenuPrincipal.Designer.cs">
+    <Compile Include="Formularios\frmMenuPrincipal.Designer.cs">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRecebimentos.cs">
+    <Compile Include="Formularios\frmRecebimentos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRecebimentos.Designer.cs">
+    <Compile Include="Formularios\frmRecebimentos.Designer.cs">
       <DependentUpon>frmRecebimentos.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Classes\Util.cs" />
-    <EmbeddedResource Include="frmConta.resx">
+    <EmbeddedResource Include="Formularios\frmConta.resx">
       <DependentUpon>frmConta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmContasLancadas.resx">
+    <EmbeddedResource Include="Formularios\frmContasLancadas.resx">
       <DependentUpon>frmContasLancadas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMenuPrincipal.resx">
+    <EmbeddedResource Include="Formularios\frmMenuPrincipal.resx">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRecebimentos.resx">
+    <EmbeddedResource Include="Formularios\frmRecebimentos.resx">
       <DependentUpon>frmRecebimentos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -148,6 +151,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="ACGestorDataSet.xsc">
       <DependentUpon>ACGestorDataSet.xsd</DependentUpon>
@@ -174,8 +178,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Imagens\" />
+    <Content Include="Imagens\Conta.ico" />
+    <Content Include="Imagens\conta.png" />
+    <Content Include="Imagens\Gestor.ico" />
+    <Content Include="Imagens\Gestor.png" />
+    <Content Include="Imagens\Recebimento.ico" />
+    <Content Include="Imagens\Recebimento.png" />
+    <Content Include="Imagens\Visualizacao.ico" />
+    <Content Include="Imagens\Visualizacao.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

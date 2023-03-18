@@ -29,6 +29,7 @@ namespace Gestor
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmContas));
             this.grpRegistro = new System.Windows.Forms.GroupBox();
             this.txtDataLancamento = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
@@ -469,6 +470,7 @@ namespace Gestor
             this.Controls.Add(this.grpInformacoesAdicionais);
             this.Controls.Add(this.grpInformacoesGerais);
             this.Controls.Add(this.grpRegistro);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "frmContas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

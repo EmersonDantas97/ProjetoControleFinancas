@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmContasLancadas));
             this.tblContaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aCGestorDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aCGestorDataSet = new Gestor.ACGestorDataSet();
@@ -109,8 +110,13 @@
             this.dgv_ListagemContas.Location = new System.Drawing.Point(12, 12);
             this.dgv_ListagemContas.Name = "dgv_ListagemContas";
             this.dgv_ListagemContas.ReadOnly = true;
+            this.dgv_ListagemContas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_ListagemContas.Size = new System.Drawing.Size(775, 426);
             this.dgv_ListagemContas.TabIndex = 0;
+            this.dgv_ListagemContas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ListagemContas_CellClick);
+            this.dgv_ListagemContas.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_ListagemContas_CellMouseClick);
+            this.dgv_ListagemContas.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgv_ListagemContas_MouseClick);
+            this.dgv_ListagemContas.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgv_ListagemContas_MouseDoubleClick);
             this.dgv_ListagemContas.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dgv_ListagemContas_MouseDown);
             // 
             // cntIdDataGridViewTextBoxColumn
@@ -231,6 +237,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dgv_ListagemContas);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "frmContasLancadas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
