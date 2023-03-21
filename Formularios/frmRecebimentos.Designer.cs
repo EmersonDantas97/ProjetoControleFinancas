@@ -255,7 +255,6 @@
             this.ClientSize = new System.Drawing.Size(443, 351);
             this.Controls.Add(this.tblRecebimentosDataGridView);
             this.Controls.Add(this.tblRecebimentosBindingNavigator);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "frmRecebimentos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -1,10 +1,7 @@
 ﻿using Gestor.Classes;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Drawing;
-using System.Text;
 
 namespace Gestor
 {
@@ -99,7 +96,6 @@ namespace Gestor
                         db.Close();
                     }
                 }
-
             }
 
             public static DataTable BuscarContas()
@@ -114,7 +110,8 @@ namespace Gestor
             public static void MudaStatusConta(string status, string codigoConta)
             {
                 SQLServer db = new SQLServer();
-                db.SQLCommand($"UPDATE tblConta SET Cnt_Status = {status} WHERE Cnt_id = {codigoConta};");
+                string SQL = $"UPDATE tblConta SET Cnt_Status = '{status}' WHERE Cnt_id = {codigoConta};";
+                db.SQLCommand(SQL);
                 db.Close();
             }
 

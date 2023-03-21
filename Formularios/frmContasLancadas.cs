@@ -50,11 +50,16 @@ namespace Gestor
         }
         void OpcaoPagar_Click(object sender1, EventArgs e1)
         {
-            MessageBox.Show("Opção foi paga!");
+
+            Conta.Unit.MudaStatusConta("P", RetornaIdDaLinhaSelecionada());
+            CarregaGrid();
+            MessageBox.Show("Registro de pagamento foi salvo!", "Conta paga", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         void OpcaoExcluir_Click(object sender1, EventArgs e1)
         {
-            MessageBox.Show("Opção excluida!");
+            Conta.Unit.ExcluirConta(RetornaIdDaLinhaSelecionada());
+            CarregaGrid();
+            MessageBox.Show("Conta excluída com sucesso!", "Exclusão de conta", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         void OpcaoEditar_Click(object sender1, EventArgs e1)
         {
@@ -99,6 +104,17 @@ namespace Gestor
         private void dgv_ListagemContas_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
 
+        }
+
+        public string RetornaIdDaLinhaSelecionada()
+        {
+            // Criando objeto DataDridViewRow, para podermos armazenar a linha que foi selecionada na grid.
+            DataGridViewRow Linha = dgv_ListagemContas.SelectedRows[0];
+
+            // Armazenando o conteúdo da primeira célula da DataTable na string. 
+            string id = Linha.Cells[0].Value.ToString();
+
+            return id;
         }
 
         private void dgv_ListagemContas_MouseDoubleClick(object sender, MouseEventArgs e)

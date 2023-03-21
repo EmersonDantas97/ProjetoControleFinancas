@@ -134,6 +134,9 @@
     <EmbeddedResource Include="Formularios\frmConta.resx">
       <DependentUpon>frmConta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmContasLancadas.aa.resx">
+      <DependentUpon>frmContasLancadas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmContasLancadas.resx">
       <DependentUpon>frmContasLancadas.cs</DependentUpon>
     </EmbeddedResource>
