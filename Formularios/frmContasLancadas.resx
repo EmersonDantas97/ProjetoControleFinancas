@@ -129,158 +129,229 @@
   <metadata name="tblContaTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>561, 17</value>
   </metadata>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="dgv_ListagemContas.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="cntIdDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Código</value>
+  </data>
+  <data name="cntNomeContaDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Nome Conta</value>
+  </data>
+  <data name="cntValorDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="cntTipoDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Tipo Conta</value>
+  </data>
+  <data name="cntDescricaoCartaoDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Nome Cartão</value>
+  </data>
+  <data name="cntDataEmissaoDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Data Emissao</value>
+  </data>
+  <data name="cntLancamentoIncertoDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Confirmar Lançamento</value>
+  </data>
+  <data name="cntQtdTotalParcelaDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Qtd Parcelas</value>
+  </data>
+  <data name="cntParcelaAtualDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Parcela Atual</value>
+  </data>
+  <data name="cntDataLancamentoDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Data Lancamento</value>
+  </data>
+  <data name="cntDataPagamentoDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Data Pagamento</value>
+  </data>
+  <data name="cntObservacaoDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Observação</value>
+  </data>
+  <data name="cntFormaPgtoDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Forma Pagamento</value>
+  </data>
+  <data name="cntDuracaoDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Duração da Conta</value>
+  </data>
   <metadata name="tblContaBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>192, 56</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="dgv_ListagemContas.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="dgv_ListagemContas.Size" type="System.Drawing.Size, System.Drawing">
+    <value>775, 426</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="dgv_ListagemContas.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dgv_ListagemContas.Name" xml:space="preserve">
+    <value>dgv_ListagemContas</value>
+  </data>
+  <data name="&gt;&gt;dgv_ListagemContas.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgv_ListagemContas.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dgv_ListagemContas.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="tblCartaoBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>733, 17</value>
   </metadata>
   <metadata name="tblCartaoTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 56</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-        Hw7z/z8GIE48/qW87AAAAABJRU5ErkJggg==
-</value>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>800, 450</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Contas Lançadas</value>
+  </data>
+  <data name="&gt;&gt;tblContaBindingSource.Name" xml:space="preserve">
+    <value>tblContaBindingSource</value>
+  </data>
+  <data name="&gt;&gt;tblContaBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;aCGestorDataSetBindingSource.Name" xml:space="preserve">
+    <value>aCGestorDataSetBindingSource</value>
+  </data>
+  <data name="&gt;&gt;aCGestorDataSetBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;aCGestorDataSet.Name" xml:space="preserve">
+    <value>aCGestorDataSet</value>
+  </data>
+  <data name="&gt;&gt;aCGestorDataSet.Type" xml:space="preserve">
+    <value>Gestor.ACGestorDataSet, ACGestorDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tblContaTableAdapter.Name" xml:space="preserve">
+    <value>tblContaTableAdapter</value>
+  </data>
+  <data name="&gt;&gt;tblContaTableAdapter.Type" xml:space="preserve">
+    <value>Gestor.ACGestorDataSetTableAdapters.tblContaTableAdapter, ACGestorDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cntIdDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>cntIdDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;cntIdDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cntNomeContaDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>cntNomeContaDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;cntNomeContaDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cntValorDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>cntValorDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;cntValorDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cntTipoDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>cntTipoDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;cntTipoDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cntDescricaoCartaoDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>cntDescricaoCartaoDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;cntDescricaoCartaoDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cntDataEmissaoDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>cntDataEmissaoDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;cntDataEmissaoDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cntLancamentoIncertoDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>cntLancamentoIncertoDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;cntLancamentoIncertoDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cntQtdTotalParcelaDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>cntQtdTotalParcelaDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;cntQtdTotalParcelaDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cntParcelaAtualDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>cntParcelaAtualDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;cntParcelaAtualDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cntDataLancamentoDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>cntDataLancamentoDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;cntDataLancamentoDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cntDataPagamentoDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>cntDataPagamentoDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;cntDataPagamentoDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cntObservacaoDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>cntObservacaoDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;cntObservacaoDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cntFormaPgtoDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>cntFormaPgtoDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;cntFormaPgtoDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cntDuracaoDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>cntDuracaoDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;cntDuracaoDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tblContaBindingSource1.Name" xml:space="preserve">
+    <value>tblContaBindingSource1</value>
+  </data>
+  <data name="&gt;&gt;tblContaBindingSource1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tblCartaoBindingSource.Name" xml:space="preserve">
+    <value>tblCartaoBindingSource</value>
+  </data>
+  <data name="&gt;&gt;tblCartaoBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tblCartaoTableAdapter.Name" xml:space="preserve">
+    <value>tblCartaoTableAdapter</value>
+  </data>
+  <data name="&gt;&gt;tblCartaoTableAdapter.Type" xml:space="preserve">
+    <value>Gestor.ACGestorDataSetTableAdapters.tblCartaoTableAdapter, ACGestorDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmContasLancadas</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

@@ -84,9 +84,7 @@
             this.dgv_ListagemContas.AllowUserToAddRows = false;
             this.dgv_ListagemContas.AllowUserToDeleteRows = false;
             this.dgv_ListagemContas.AllowUserToOrderColumns = true;
-            this.dgv_ListagemContas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.dgv_ListagemContas, "dgv_ListagemContas");
             this.dgv_ListagemContas.AutoGenerateColumns = false;
             this.dgv_ListagemContas.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgv_ListagemContas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -107,12 +105,9 @@
             this.cntDuracaoDataGridViewTextBoxColumn});
             this.dgv_ListagemContas.DataSource = this.tblContaBindingSource1;
             this.dgv_ListagemContas.GridColor = System.Drawing.SystemColors.ButtonShadow;
-            this.dgv_ListagemContas.Location = new System.Drawing.Point(12, 12);
             this.dgv_ListagemContas.Name = "dgv_ListagemContas";
             this.dgv_ListagemContas.ReadOnly = true;
             this.dgv_ListagemContas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_ListagemContas.Size = new System.Drawing.Size(775, 426);
-            this.dgv_ListagemContas.TabIndex = 0;
             this.dgv_ListagemContas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ListagemContas_CellClick);
             this.dgv_ListagemContas.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_ListagemContas_CellMouseClick);
             this.dgv_ListagemContas.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgv_ListagemContas_MouseClick);
@@ -122,98 +117,98 @@
             // cntIdDataGridViewTextBoxColumn
             // 
             this.cntIdDataGridViewTextBoxColumn.DataPropertyName = "Cnt_Id";
-            this.cntIdDataGridViewTextBoxColumn.HeaderText = "Código";
+            resources.ApplyResources(this.cntIdDataGridViewTextBoxColumn, "cntIdDataGridViewTextBoxColumn");
             this.cntIdDataGridViewTextBoxColumn.Name = "cntIdDataGridViewTextBoxColumn";
             this.cntIdDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // cntNomeContaDataGridViewTextBoxColumn
             // 
             this.cntNomeContaDataGridViewTextBoxColumn.DataPropertyName = "Cnt_NomeConta";
-            this.cntNomeContaDataGridViewTextBoxColumn.HeaderText = "Nome Conta";
+            resources.ApplyResources(this.cntNomeContaDataGridViewTextBoxColumn, "cntNomeContaDataGridViewTextBoxColumn");
             this.cntNomeContaDataGridViewTextBoxColumn.Name = "cntNomeContaDataGridViewTextBoxColumn";
             this.cntNomeContaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // cntValorDataGridViewTextBoxColumn
             // 
             this.cntValorDataGridViewTextBoxColumn.DataPropertyName = "Cnt_Valor";
-            this.cntValorDataGridViewTextBoxColumn.HeaderText = "Valor";
+            resources.ApplyResources(this.cntValorDataGridViewTextBoxColumn, "cntValorDataGridViewTextBoxColumn");
             this.cntValorDataGridViewTextBoxColumn.Name = "cntValorDataGridViewTextBoxColumn";
             this.cntValorDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // cntTipoDataGridViewTextBoxColumn
             // 
             this.cntTipoDataGridViewTextBoxColumn.DataPropertyName = "Cnt_Tipo";
-            this.cntTipoDataGridViewTextBoxColumn.HeaderText = "Tipo Conta";
+            resources.ApplyResources(this.cntTipoDataGridViewTextBoxColumn, "cntTipoDataGridViewTextBoxColumn");
             this.cntTipoDataGridViewTextBoxColumn.Name = "cntTipoDataGridViewTextBoxColumn";
             this.cntTipoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // cntDescricaoCartaoDataGridViewTextBoxColumn
             // 
             this.cntDescricaoCartaoDataGridViewTextBoxColumn.DataPropertyName = "Cnt_DescricaoCartao";
-            this.cntDescricaoCartaoDataGridViewTextBoxColumn.HeaderText = "Nome Cartão";
+            resources.ApplyResources(this.cntDescricaoCartaoDataGridViewTextBoxColumn, "cntDescricaoCartaoDataGridViewTextBoxColumn");
             this.cntDescricaoCartaoDataGridViewTextBoxColumn.Name = "cntDescricaoCartaoDataGridViewTextBoxColumn";
             this.cntDescricaoCartaoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // cntDataEmissaoDataGridViewTextBoxColumn
             // 
             this.cntDataEmissaoDataGridViewTextBoxColumn.DataPropertyName = "Cnt_DataEmissao";
-            this.cntDataEmissaoDataGridViewTextBoxColumn.HeaderText = "Data Emissao";
+            resources.ApplyResources(this.cntDataEmissaoDataGridViewTextBoxColumn, "cntDataEmissaoDataGridViewTextBoxColumn");
             this.cntDataEmissaoDataGridViewTextBoxColumn.Name = "cntDataEmissaoDataGridViewTextBoxColumn";
             this.cntDataEmissaoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // cntLancamentoIncertoDataGridViewTextBoxColumn
             // 
             this.cntLancamentoIncertoDataGridViewTextBoxColumn.DataPropertyName = "Cnt_LancamentoIncerto";
-            this.cntLancamentoIncertoDataGridViewTextBoxColumn.HeaderText = "Confirmar Lançamento";
+            resources.ApplyResources(this.cntLancamentoIncertoDataGridViewTextBoxColumn, "cntLancamentoIncertoDataGridViewTextBoxColumn");
             this.cntLancamentoIncertoDataGridViewTextBoxColumn.Name = "cntLancamentoIncertoDataGridViewTextBoxColumn";
             this.cntLancamentoIncertoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // cntQtdTotalParcelaDataGridViewTextBoxColumn
             // 
             this.cntQtdTotalParcelaDataGridViewTextBoxColumn.DataPropertyName = "Cnt_QtdTotalParcela";
-            this.cntQtdTotalParcelaDataGridViewTextBoxColumn.HeaderText = "Qtd Parcelas";
+            resources.ApplyResources(this.cntQtdTotalParcelaDataGridViewTextBoxColumn, "cntQtdTotalParcelaDataGridViewTextBoxColumn");
             this.cntQtdTotalParcelaDataGridViewTextBoxColumn.Name = "cntQtdTotalParcelaDataGridViewTextBoxColumn";
             this.cntQtdTotalParcelaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // cntParcelaAtualDataGridViewTextBoxColumn
             // 
             this.cntParcelaAtualDataGridViewTextBoxColumn.DataPropertyName = "Cnt_ParcelaAtual";
-            this.cntParcelaAtualDataGridViewTextBoxColumn.HeaderText = "Parcela Atual";
+            resources.ApplyResources(this.cntParcelaAtualDataGridViewTextBoxColumn, "cntParcelaAtualDataGridViewTextBoxColumn");
             this.cntParcelaAtualDataGridViewTextBoxColumn.Name = "cntParcelaAtualDataGridViewTextBoxColumn";
             this.cntParcelaAtualDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // cntDataLancamentoDataGridViewTextBoxColumn
             // 
             this.cntDataLancamentoDataGridViewTextBoxColumn.DataPropertyName = "Cnt_DataLancamento";
-            this.cntDataLancamentoDataGridViewTextBoxColumn.HeaderText = "Data Lancamento";
+            resources.ApplyResources(this.cntDataLancamentoDataGridViewTextBoxColumn, "cntDataLancamentoDataGridViewTextBoxColumn");
             this.cntDataLancamentoDataGridViewTextBoxColumn.Name = "cntDataLancamentoDataGridViewTextBoxColumn";
             this.cntDataLancamentoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // cntDataPagamentoDataGridViewTextBoxColumn
             // 
             this.cntDataPagamentoDataGridViewTextBoxColumn.DataPropertyName = "Cnt_DataPagamento";
-            this.cntDataPagamentoDataGridViewTextBoxColumn.HeaderText = "Data Pagamento";
+            resources.ApplyResources(this.cntDataPagamentoDataGridViewTextBoxColumn, "cntDataPagamentoDataGridViewTextBoxColumn");
             this.cntDataPagamentoDataGridViewTextBoxColumn.Name = "cntDataPagamentoDataGridViewTextBoxColumn";
             this.cntDataPagamentoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // cntObservacaoDataGridViewTextBoxColumn
             // 
             this.cntObservacaoDataGridViewTextBoxColumn.DataPropertyName = "Cnt_Observacao";
-            this.cntObservacaoDataGridViewTextBoxColumn.HeaderText = "Observação";
+            resources.ApplyResources(this.cntObservacaoDataGridViewTextBoxColumn, "cntObservacaoDataGridViewTextBoxColumn");
             this.cntObservacaoDataGridViewTextBoxColumn.Name = "cntObservacaoDataGridViewTextBoxColumn";
             this.cntObservacaoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // cntFormaPgtoDataGridViewTextBoxColumn
             // 
             this.cntFormaPgtoDataGridViewTextBoxColumn.DataPropertyName = "Cnt_FormaPgto";
-            this.cntFormaPgtoDataGridViewTextBoxColumn.HeaderText = "Forma Pagamento";
+            resources.ApplyResources(this.cntFormaPgtoDataGridViewTextBoxColumn, "cntFormaPgtoDataGridViewTextBoxColumn");
             this.cntFormaPgtoDataGridViewTextBoxColumn.Name = "cntFormaPgtoDataGridViewTextBoxColumn";
             this.cntFormaPgtoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // cntDuracaoDataGridViewTextBoxColumn
             // 
             this.cntDuracaoDataGridViewTextBoxColumn.DataPropertyName = "Cnt_Duracao";
-            this.cntDuracaoDataGridViewTextBoxColumn.HeaderText = "Duração da Conta";
+            resources.ApplyResources(this.cntDuracaoDataGridViewTextBoxColumn, "cntDuracaoDataGridViewTextBoxColumn");
             this.cntDuracaoDataGridViewTextBoxColumn.Name = "cntDuracaoDataGridViewTextBoxColumn";
             this.cntDuracaoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -233,15 +228,11 @@
             // 
             // frmContasLancadas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dgv_ListagemContas);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "frmContasLancadas";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Contas Lançadas";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmContasLancadas_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.tblContaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCGestorDataSetBindingSource)).EndInit();
