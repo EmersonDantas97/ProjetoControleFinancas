@@ -57,7 +57,7 @@ namespace Gestor
         }
         void OpcaoExcluir_Click(object sender1, EventArgs e1)
         {
-            Conta.Unit.ExcluirConta(RetornaIdDaLinhaSelecionada());
+            Conta.Unit.MudaStatusConta("E", RetornaIdDaLinhaSelecionada());
             CarregaGrid();
             MessageBox.Show("Conta excluída com sucesso!", "Exclusão de conta", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }

@@ -36,5 +36,12 @@ namespace Gestor
             if (e.KeyCode == Keys.Escape)
                 Application.Exit();
         }
+
+        private void cartãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCadastroCartao f = new frmCadastroCartao();
+            f.MdiParent = this;
+            f.Show();
+        }
     }
 }
