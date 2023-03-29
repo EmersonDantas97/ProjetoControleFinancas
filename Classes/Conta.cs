@@ -135,6 +135,9 @@ namespace Gestor
 
                 codigo = dr["ultcod"].ToString();
 
+                if (codigo == "")
+                    codigo = "0";
+
                 return codigo;
 
             }

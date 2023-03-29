@@ -61,3 +61,4 @@ D:\EMERSON\Programacao\Gestor\obj\Debug\Gestor.frmRecebimentos.resources
 D:\EMERSON\Programacao\Gestor\bin\Debug\aa\Gestor.resources.dll
 D:\EMERSON\Programacao\Gestor\obj\Debug\Gestor.frmContasLancadas.aa.resources
 D:\EMERSON\Programacao\Gestor\obj\Debug\aa\Gestor.resources.dll
+D:\EMERSON\Programacao\Gestor\obj\Debug\Gestor.frmCadastroCartao.resources
