@@ -58,10 +58,15 @@
             // 
             // dgvCartoes
             // 
+            this.dgvCartoes.AllowUserToAddRows = false;
+            this.dgvCartoes.AllowUserToDeleteRows = false;
+            this.dgvCartoes.AllowUserToOrderColumns = true;
             this.dgvCartoes.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvCartoes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCartoes.Location = new System.Drawing.Point(11, 53);
             this.dgvCartoes.Name = "dgvCartoes";
+            this.dgvCartoes.ReadOnly = true;
+            this.dgvCartoes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCartoes.Size = new System.Drawing.Size(277, 214);
             this.dgvCartoes.TabIndex = 2;
             // 
@@ -99,6 +104,7 @@
             this.btnExcluir.TabIndex = 6;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnNovo
             // 
@@ -108,6 +114,7 @@
             this.btnNovo.TabIndex = 7;
             this.btnNovo.Text = "Novo";
             this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // frmCadastroCartao
             // 
