@@ -105,6 +105,13 @@
     <Compile Include="Classes\Cartao.cs" />
     <Compile Include="Classes\SQLServer.cs" />
     <Compile Include="Classes\Conta.cs" />
+    <Compile Include="Classes\TipoConta.cs" />
+    <Compile Include="Formularios\frmCadastroTipoConta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmCadastroTipoConta.Designer.cs">
+      <DependentUpon>frmCadastroTipoConta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmConta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +147,9 @@
     <Compile Include="Classes\Util.cs" />
     <EmbeddedResource Include="Formularios\frmCadastroCartao.resx">
       <DependentUpon>frmCadastroCartao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmCadastroTipoConta.resx">
+      <DependentUpon>frmCadastroTipoConta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmConta.resx">
       <DependentUpon>frmConta.cs</DependentUpon>

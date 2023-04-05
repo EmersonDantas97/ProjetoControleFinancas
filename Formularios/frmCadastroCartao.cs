@@ -28,7 +28,7 @@ namespace Gestor
             txtNomeCartao.Text = "";
         }
 
-        public void CriandoDicasFerramentas()
+        private void CriandoDicasFerramentas()
         {
             // Instanciando classe ToolTip para ser criadas as dicas de ferramentas.
             ToolTip dicaFerramenta = new ToolTip();
@@ -61,11 +61,16 @@ namespace Gestor
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            string linha = dgvCartoes.SelectedRows[0].Cells[0].Value.ToString();
-            Cartao.Unit.ExcluirRegistro(linha);
-            MessageBox.Show("Registro EXCLUÍDO com sucesso!", "Registro salvo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            CarregaGrid();
-            LimpaCampo();
+            DialogResult R = MessageBox.Show("Deseja excluir o cartão selecionado na grid?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            
+            if (R == DialogResult.Yes)
+            {
+                string linha = dgvCartoes.SelectedRows[0].Cells[0].Value.ToString();
+                Cartao.Unit.ExcluirRegistro(linha);
+                MessageBox.Show("Registro EXCLUÍDO com sucesso!", "Registro salvo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                CarregaGrid();
+                LimpaCampo();
+            }
         }
 
         private void btnNovo_Click(object sender, EventArgs e)

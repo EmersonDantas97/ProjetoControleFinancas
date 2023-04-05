@@ -4,17 +4,17 @@ using System.Windows.Forms;
 
 namespace Gestor.Classes
 {
-    public class Cartao
+    public class TipoConta
     {
-
         public class Unit
         {
-            public string Nome;
-            public string Codigo;
+            string Nome;
 
-            public Unit() { }
+            public Unit()
+            {
+            }
 
-            public void CadastrarCartao(string nomeCartao)
+            public void CadastrarTipoConta(string nomeCartao)
             {
                 this.Nome = nomeCartao;
 
@@ -51,11 +51,9 @@ namespace Gestor.Classes
                 db.Close();
             }
         }
-
         public class List
         {
             public List<Unit> ListUnit { get; set; }
         }
-
     }
 }
