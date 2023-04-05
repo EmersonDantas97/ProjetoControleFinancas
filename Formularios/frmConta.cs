@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Gestor.Classes;
+using Org.BouncyCastle.Asn1.Ocsp;
+using System;
+using System.Data;
 using System.Windows.Forms;
 
 
@@ -13,11 +16,13 @@ namespace Gestor
             novoCadastro();
 
             #region Carregando opções de cartão
-            cmbCartao.Items.Clear();
-            cmbCartao.Items.Add("NU");
-            cmbCartao.Items.Add("WILL");
-            cmbCartao.Items.Add("C6");
-            #endregion
+            var Cartoes = Cartao.Unit.TrazerCartoesCadastrados();
+
+            for (int i = 0; i < Cartoes.Rows.Count; i++)
+            {
+                cmbCartao.Items.Add(Cartoes.Rows[i][1].ToString());
+            }
+           #endregion
 
             #region Carregando opções de parcelamento
             for (int i = 1; i < 50; i++)
@@ -34,6 +39,7 @@ namespace Gestor
             cmbTipoConta.Items.Add("COMBUSTÍVEL".ToUpper());
             cmbTipoConta.Items.Add("LAZER".ToUpper());
             cmbTipoConta.Items.Add("FIXA");
+            // cmbTipoConta.DataSource = 
             #endregion
 
             #region Dica de ferramenta para os botões
@@ -294,10 +300,14 @@ namespace Gestor
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            Conta.Unit.ExcluirConta(this.txtCodigo.Text);
-            MessageBox.Show("Registro excluido com sucesso!", "Exclusão", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            novoCadastro();
-            
+            DialogResult resposta = MessageBox.Show("Deseja prosseguir com a exclusão deste registro?", "Confirmação", MessageBoxButtons.YesNo);
+
+            if (resposta == DialogResult.Yes)
+            {
+                Conta.Unit.ExcluirConta(this.txtCodigo.Text);
+                MessageBox.Show("Registro excluido com sucesso!", "Exclusão", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                novoCadastro();
+            }
         }
 
         private void frmContas_KeyDown(object sender, KeyEventArgs e) // Quando pressionado alguma tecla do formulario, este evento será acionado.
