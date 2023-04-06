@@ -14,9 +14,9 @@ namespace Gestor.Classes
             {
             }
 
-            public void CadastrarTipoConta(string nomeCartao)
+            public void CadastrarTipoConta(string tipoConta)
             {
-                this.Nome = nomeCartao;
+                this.Nome = tipoConta;
 
                 if (this.Nome == "")
                 {
@@ -25,17 +25,17 @@ namespace Gestor.Classes
                 else
                 {
                     SQLServer db = new SQLServer();
-                    string SQL = $"INSERT INTO tblCadastroCartao (cdc_NomeCartao) values ('{this.Nome}');";
+                    string SQL = $"INSERT INTO tblTipoConta (cct_TipoConta, cct_Status) values ('{this.Nome}', 'A');";
                     db.SQLCommand(SQL);
                     db.Close();
                 }
             }
 
-            public static DataTable TrazerCartoesCadastrados()
+            public static DataTable TrazerTiposCadastrados()
             {
                 DataTable dt;
                 SQLServer db = new SQLServer();
-                string SQL = $"SELECT cdc_id as Codigo, cdc_NomeCartao as Cartao FROM tblCadastroCartao WHERE cdc_Status = 'A';";
+                string SQL = $"SELECT cct_id as Codigo, cct_TipoConta as Tipo FROM tblTipoConta WHERE cct_Status = 'A';";
                 dt = db.SQLQuery(SQL);
                 db.Close();
 
@@ -45,7 +45,7 @@ namespace Gestor.Classes
             public static void ExcluirRegistro(string id)
             {
                 // TODO: INSERIR VALIDAÇÃO ANTES DE EXCLUIR PARA VERIFICAR SE NÃO VAI TENTAR EXCLUIR REGISTRO INEXISTENTE
-                string SQL = $"UPDATE tblCadastroCartao SET cdc_Status = 'E' WHERE cdc_Id = '{id}';";
+                string SQL = $"UPDATE tblTipoConta SET cct_Status = 'E' WHERE cct_Id = '{id}';";
                 SQLServer db = new SQLServer();
                 db.SQLCommand(SQL);
                 db.Close();

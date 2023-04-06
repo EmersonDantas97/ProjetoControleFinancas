@@ -30,13 +30,13 @@
         {
             this.lblCodigo = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.dgvCartoes = new System.Windows.Forms.DataGridView();
-            this.txtNomeCartao = new System.Windows.Forms.TextBox();
-            this.lblNomeCartao = new System.Windows.Forms.Label();
+            this.dgvTipoConta = new System.Windows.Forms.DataGridView();
+            this.txtTipoConta = new System.Windows.Forms.TextBox();
+            this.lblTipoConta = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCartoes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTipoConta)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCodigo
@@ -56,35 +56,35 @@
             this.txtCodigo.Size = new System.Drawing.Size(63, 20);
             this.txtCodigo.TabIndex = 1;
             // 
-            // dgvCartoes
+            // dgvTipoConta
             // 
-            this.dgvCartoes.AllowUserToAddRows = false;
-            this.dgvCartoes.AllowUserToDeleteRows = false;
-            this.dgvCartoes.AllowUserToOrderColumns = true;
-            this.dgvCartoes.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvCartoes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCartoes.Location = new System.Drawing.Point(11, 53);
-            this.dgvCartoes.Name = "dgvCartoes";
-            this.dgvCartoes.ReadOnly = true;
-            this.dgvCartoes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCartoes.Size = new System.Drawing.Size(277, 214);
-            this.dgvCartoes.TabIndex = 2;
+            this.dgvTipoConta.AllowUserToAddRows = false;
+            this.dgvTipoConta.AllowUserToDeleteRows = false;
+            this.dgvTipoConta.AllowUserToOrderColumns = true;
+            this.dgvTipoConta.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvTipoConta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTipoConta.Location = new System.Drawing.Point(11, 53);
+            this.dgvTipoConta.Name = "dgvTipoConta";
+            this.dgvTipoConta.ReadOnly = true;
+            this.dgvTipoConta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvTipoConta.Size = new System.Drawing.Size(277, 214);
+            this.dgvTipoConta.TabIndex = 2;
             // 
-            // txtNomeCartao
+            // txtTipoConta
             // 
-            this.txtNomeCartao.Location = new System.Drawing.Point(81, 26);
-            this.txtNomeCartao.Name = "txtNomeCartao";
-            this.txtNomeCartao.Size = new System.Drawing.Size(206, 20);
-            this.txtNomeCartao.TabIndex = 4;
+            this.txtTipoConta.Location = new System.Drawing.Point(81, 26);
+            this.txtTipoConta.Name = "txtTipoConta";
+            this.txtTipoConta.Size = new System.Drawing.Size(206, 20);
+            this.txtTipoConta.TabIndex = 4;
             // 
-            // lblNomeCartao
+            // lblTipoConta
             // 
-            this.lblNomeCartao.AutoSize = true;
-            this.lblNomeCartao.Location = new System.Drawing.Point(81, 10);
-            this.lblNomeCartao.Name = "lblNomeCartao";
-            this.lblNomeCartao.Size = new System.Drawing.Size(59, 13);
-            this.lblNomeCartao.TabIndex = 3;
-            this.lblNomeCartao.Text = "Tipo Conta";
+            this.lblTipoConta.AutoSize = true;
+            this.lblTipoConta.Location = new System.Drawing.Point(81, 10);
+            this.lblTipoConta.Name = "lblTipoConta";
+            this.lblTipoConta.Size = new System.Drawing.Size(59, 13);
+            this.lblTipoConta.TabIndex = 3;
+            this.lblTipoConta.Text = "Tipo Conta";
             // 
             // btnSalvar
             // 
@@ -94,6 +94,7 @@
             this.btnSalvar.TabIndex = 5;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnExcluir
             // 
@@ -103,6 +104,7 @@
             this.btnExcluir.TabIndex = 6;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnNovo
             // 
@@ -121,16 +123,17 @@
             this.Controls.Add(this.btnNovo);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.txtNomeCartao);
-            this.Controls.Add(this.lblNomeCartao);
-            this.Controls.Add(this.dgvCartoes);
+            this.Controls.Add(this.txtTipoConta);
+            this.Controls.Add(this.lblTipoConta);
+            this.Controls.Add(this.dgvTipoConta);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.lblCodigo);
             this.KeyPreview = true;
             this.Name = "frmCadastroTipoConta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Tipo de Conta";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCartoes)).EndInit();
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmCadastroTipoConta_KeyDown);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTipoConta)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -140,9 +143,9 @@
 
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.TextBox txtCodigo;
-        private System.Windows.Forms.DataGridView dgvCartoes;
-        private System.Windows.Forms.TextBox txtNomeCartao;
-        private System.Windows.Forms.Label lblNomeCartao;
+        private System.Windows.Forms.DataGridView dgvTipoConta;
+        private System.Windows.Forms.TextBox txtTipoConta;
+        private System.Windows.Forms.Label lblTipoConta;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnNovo;

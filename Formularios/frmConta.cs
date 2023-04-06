@@ -18,11 +18,10 @@ namespace Gestor
             #region Carregando opções de cartão
             var Cartoes = Cartao.Unit.TrazerCartoesCadastrados();
 
+            cmbCartao.Items.Clear();
             for (int i = 0; i < Cartoes.Rows.Count; i++)
-            {
                 cmbCartao.Items.Add(Cartoes.Rows[i][1].ToString());
-            }
-           #endregion
+            #endregion
 
             #region Carregando opções de parcelamento
             for (int i = 1; i < 50; i++)
@@ -33,13 +32,12 @@ namespace Gestor
             #endregion
 
             #region Carregando opções de tipo de conta
+            var Tipos = TipoConta.Unit.TrazerTiposCadastrados();
+
             cmbTipoConta.Items.Clear();
-            cmbTipoConta.Items.Add("FARMÁCIA".ToUpper());
-            cmbTipoConta.Items.Add("MERCADO".ToUpper());
-            cmbTipoConta.Items.Add("COMBUSTÍVEL".ToUpper());
-            cmbTipoConta.Items.Add("LAZER".ToUpper());
-            cmbTipoConta.Items.Add("FIXA");
-            // cmbTipoConta.DataSource = 
+
+            for (int i = 0; i < Tipos.Rows.Count; i++)
+                cmbTipoConta.Items.Add(Tipos.Rows[i][1].ToString());
             #endregion
 
             #region Dica de ferramenta para os botões
@@ -328,6 +326,18 @@ namespace Gestor
             if (e.KeyCode == Keys.F4) // Comparando se a tecla que foi pressionada é igual ao parâmetro passado.
                 this.btnExcluir.PerformClick();// Chamando o evento de clique no botão.
 
+        }
+
+        private void cmbCartao_Leave(object sender, EventArgs e)
+        {
+            int opcaoSelecionada = cmbCartao.SelectedIndex;
+
+            if (opcaoSelecionada == -1)
+            {
+                MessageBox.Show("Opção selecionada não foi cadastrada!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                cmbCartao.Text = "";
+                cmbCartao.Focus();
+            }
         }
     }
 }
