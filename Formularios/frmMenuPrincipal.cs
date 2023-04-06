@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gestor.Formularios;
+using System;
 using System.Windows.Forms;
 
 namespace Gestor
@@ -40,6 +41,13 @@ namespace Gestor
         private void cartãoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmCadastroCartao f = new frmCadastroCartao();
+            f.MdiParent = this;
+            f.Show();
+        }
+
+        private void tipoContaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCadastroTipoConta f = new frmCadastroTipoConta();
             f.MdiParent = this;
             f.Show();
         }

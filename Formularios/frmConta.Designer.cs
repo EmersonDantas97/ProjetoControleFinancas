@@ -389,6 +389,7 @@ namespace Gestor
             this.cmbCartao.Name = "cmbCartao";
             this.cmbCartao.Size = new System.Drawing.Size(424, 21);
             this.cmbCartao.TabIndex = 14;
+            this.cmbCartao.Leave += new System.EventHandler(this.cmbCartao_Leave);
             // 
             // lblCartao
             // 

@@ -34,9 +34,9 @@
             this.contasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recebimentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cartãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipoContaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatoriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contasLançadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tipoContaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,6 +87,13 @@
             this.cartãoToolStripMenuItem.Text = "Cartão";
             this.cartãoToolStripMenuItem.Click += new System.EventHandler(this.cartãoToolStripMenuItem_Click);
             // 
+            // tipoContaToolStripMenuItem
+            // 
+            this.tipoContaToolStripMenuItem.Name = "tipoContaToolStripMenuItem";
+            this.tipoContaToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.tipoContaToolStripMenuItem.Text = "Tipo conta";
+            this.tipoContaToolStripMenuItem.Click += new System.EventHandler(this.tipoContaToolStripMenuItem_Click);
+            // 
             // relatoriosToolStripMenuItem
             // 
             this.relatoriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -104,12 +111,6 @@
             this.contasLançadasToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.contasLançadasToolStripMenuItem.Text = "Contas &Lançadas";
             this.contasLançadasToolStripMenuItem.Click += new System.EventHandler(this.contasLançadasToolStripMenuItem_Click);
-            // 
-            // tipoContaToolStripMenuItem
-            // 
-            this.tipoContaToolStripMenuItem.Name = "tipoContaToolStripMenuItem";
-            this.tipoContaToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
-            this.tipoContaToolStripMenuItem.Text = "Tipo conta";
             // 
             // frmMenuPrincipal
             // 
