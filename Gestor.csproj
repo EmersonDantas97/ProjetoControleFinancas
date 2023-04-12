@@ -103,6 +103,7 @@
       <DependentUpon>ACGestorDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Classes\Cartao.cs" />
+    <Compile Include="Classes\Recebimento.cs" />
     <Compile Include="Classes\SQLServer.cs" />
     <Compile Include="Classes\Conta.cs" />
     <Compile Include="Classes\TipoConta.cs" />

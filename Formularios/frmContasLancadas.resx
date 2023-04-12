@@ -123,6 +123,12 @@
   <metadata name="aCGestorDataSetBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>161, 17</value>
   </metadata>
+  <metadata name="aCGestorDataSetBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>161, 17</value>
+  </metadata>
+  <metadata name="aCGestorDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="aCGestorDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -139,20 +145,23 @@
   <data name="cntNomeContaDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Nome Conta</value>
   </data>
+  <data name="cntObservacaoDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Observação</value>
+  </data>
   <data name="cntValorDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Valor</value>
   </data>
   <data name="cntTipoDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Tipo Conta</value>
   </data>
+  <data name="cntFormaPgtoDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Forma Pagamento</value>
+  </data>
   <data name="cntDescricaoCartaoDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Nome Cartão</value>
   </data>
-  <data name="cntDataEmissaoDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Data Emissao</value>
-  </data>
-  <data name="cntLancamentoIncertoDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Confirmar Lançamento</value>
+  <data name="cntDuracaoDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Duração da Conta</value>
   </data>
   <data name="cntQtdTotalParcelaDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Qtd Parcelas</value>
@@ -160,30 +169,33 @@
   <data name="cntParcelaAtualDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Parcela Atual</value>
   </data>
+  <data name="cntDataEmissaoDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Data Emissao</value>
+  </data>
   <data name="cntDataLancamentoDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Data Lancamento</value>
   </data>
   <data name="cntDataPagamentoDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Data Pagamento</value>
   </data>
-  <data name="cntObservacaoDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Observação</value>
+  <data name="cntLancamentoIncertoDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Confirmar Lançamento</value>
   </data>
-  <data name="cntFormaPgtoDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Forma Pagamento</value>
-  </data>
-  <data name="cntDuracaoDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Duração da Conta</value>
+  <metadata name="Paga.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Paga.HeaderText" xml:space="preserve">
+    <value>Paga?</value>
   </data>
   <metadata name="tblContaBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>192, 56</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="dgv_ListagemContas.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
+    <value>12, 111</value>
   </data>
   <data name="dgv_ListagemContas.Size" type="System.Drawing.Size, System.Drawing">
-    <value>775, 426</value>
+    <value>937, 327</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="dgv_ListagemContas.TabIndex" type="System.Int32, mscorlib">
@@ -199,7 +211,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;dgv_ListagemContas.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>6</value>
   </data>
   <metadata name="tblCartaoBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>733, 17</value>
@@ -207,6 +219,399 @@
   <metadata name="tblCartaoTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 56</value>
   </metadata>
+  <data name="&gt;&gt;lbl_Pagas.Name" xml:space="preserve">
+    <value>lbl_Pagas</value>
+  </data>
+  <data name="&gt;&gt;lbl_Pagas.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Pagas.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;lbl_Pagas.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lbl_RotuloPagas.Name" xml:space="preserve">
+    <value>lbl_RotuloPagas</value>
+  </data>
+  <data name="&gt;&gt;lbl_RotuloPagas.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_RotuloPagas.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;lbl_RotuloPagas.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 14</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>291, 91</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 8</value>
+  </data>
+  <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 92</value>
+  </data>
+  <data name="panel5.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;panel5.Name" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;panel5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel5.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel5.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lbl_RotuloPagas.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_RotuloPagas.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="lbl_RotuloPagas.Location" type="System.Drawing.Point, System.Drawing">
+    <value>108, 16</value>
+  </data>
+  <data name="lbl_RotuloPagas.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 20</value>
+  </data>
+  <data name="lbl_RotuloPagas.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="lbl_RotuloPagas.Text" xml:space="preserve">
+    <value>Pagas</value>
+  </data>
+  <data name="&gt;&gt;lbl_RotuloPagas.Name" xml:space="preserve">
+    <value>lbl_RotuloPagas</value>
+  </data>
+  <data name="&gt;&gt;lbl_RotuloPagas.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_RotuloPagas.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;lbl_RotuloPagas.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lbl_Pagas.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_Pagas.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 20pt</value>
+  </data>
+  <data name="lbl_Pagas.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_Pagas.Location" type="System.Drawing.Point, System.Drawing">
+    <value>113, 42</value>
+  </data>
+  <data name="lbl_Pagas.Size" type="System.Drawing.Size, System.Drawing">
+    <value>162, 31</value>
+  </data>
+  <data name="lbl_Pagas.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="lbl_Pagas.Text" xml:space="preserve">
+    <value>R$ 4.540,23</value>
+  </data>
+  <data name="&gt;&gt;lbl_Pagas.Name" xml:space="preserve">
+    <value>lbl_Pagas</value>
+  </data>
+  <data name="&gt;&gt;lbl_Pagas.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Pagas.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;lbl_Pagas.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>328, 8</value>
+  </data>
+  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 92</value>
+  </data>
+  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lbl_APagar.Name" xml:space="preserve">
+    <value>lbl_APagar</value>
+  </data>
+  <data name="&gt;&gt;lbl_APagar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_APagar.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;lbl_APagar.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lbl_RotuloAPagar.Name" xml:space="preserve">
+    <value>lbl_RotuloAPagar</value>
+  </data>
+  <data name="&gt;&gt;lbl_RotuloAPagar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_RotuloAPagar.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;lbl_RotuloAPagar.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>323, 14</value>
+  </data>
+  <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>291, 91</value>
+  </data>
+  <data name="panel3.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;panel3.Name" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;panel3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lbl_APagar.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_APagar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 20pt</value>
+  </data>
+  <data name="lbl_APagar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_APagar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>113, 42</value>
+  </data>
+  <data name="lbl_APagar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>162, 31</value>
+  </data>
+  <data name="lbl_APagar.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="lbl_APagar.Text" xml:space="preserve">
+    <value>R$ 4.540,23</value>
+  </data>
+  <data name="&gt;&gt;lbl_APagar.Name" xml:space="preserve">
+    <value>lbl_APagar</value>
+  </data>
+  <data name="&gt;&gt;lbl_APagar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_APagar.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;lbl_APagar.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lbl_RotuloAPagar.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_RotuloAPagar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="lbl_RotuloAPagar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_RotuloAPagar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>108, 16</value>
+  </data>
+  <data name="lbl_RotuloAPagar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 20</value>
+  </data>
+  <data name="lbl_RotuloAPagar.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="lbl_RotuloAPagar.Text" xml:space="preserve">
+    <value>À Pagar</value>
+  </data>
+  <data name="&gt;&gt;lbl_RotuloAPagar.Name" xml:space="preserve">
+    <value>lbl_RotuloAPagar</value>
+  </data>
+  <data name="&gt;&gt;lbl_RotuloAPagar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_RotuloAPagar.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;lbl_RotuloAPagar.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lbl_Saldo.Name" xml:space="preserve">
+    <value>lbl_Saldo</value>
+  </data>
+  <data name="&gt;&gt;lbl_Saldo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Saldo.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;lbl_Saldo.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lbl_RotuloSaldo.Name" xml:space="preserve">
+    <value>lbl_RotuloSaldo</value>
+  </data>
+  <data name="&gt;&gt;lbl_RotuloSaldo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_RotuloSaldo.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;lbl_RotuloSaldo.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>632, 14</value>
+  </data>
+  <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>291, 91</value>
+  </data>
+  <data name="panel4.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;panel4.Name" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;panel4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lbl_Saldo.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_Saldo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 20pt</value>
+  </data>
+  <data name="lbl_Saldo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_Saldo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>113, 42</value>
+  </data>
+  <data name="lbl_Saldo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>162, 31</value>
+  </data>
+  <data name="lbl_Saldo.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="lbl_Saldo.Text" xml:space="preserve">
+    <value>R$ 4.540,23</value>
+  </data>
+  <data name="&gt;&gt;lbl_Saldo.Name" xml:space="preserve">
+    <value>lbl_Saldo</value>
+  </data>
+  <data name="&gt;&gt;lbl_Saldo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Saldo.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;lbl_Saldo.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lbl_RotuloSaldo.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_RotuloSaldo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="lbl_RotuloSaldo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_RotuloSaldo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>108, 16</value>
+  </data>
+  <data name="lbl_RotuloSaldo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 20</value>
+  </data>
+  <data name="lbl_RotuloSaldo.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="lbl_RotuloSaldo.Text" xml:space="preserve">
+    <value>Saldo</value>
+  </data>
+  <data name="&gt;&gt;lbl_RotuloSaldo.Name" xml:space="preserve">
+    <value>lbl_RotuloSaldo</value>
+  </data>
+  <data name="&gt;&gt;lbl_RotuloSaldo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_RotuloSaldo.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;lbl_RotuloSaldo.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>637, 8</value>
+  </data>
+  <data name="panel6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 92</value>
+  </data>
+  <data name="panel6.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;panel6.Name" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;panel6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel6.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel6.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -214,7 +619,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>800, 450</value>
+    <value>962, 450</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
@@ -246,90 +651,6 @@
   <data name="&gt;&gt;tblContaTableAdapter.Type" xml:space="preserve">
     <value>Gestor.ACGestorDataSetTableAdapters.tblContaTableAdapter, ACGestorDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;cntIdDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>cntIdDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;cntIdDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cntNomeContaDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>cntNomeContaDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;cntNomeContaDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cntValorDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>cntValorDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;cntValorDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cntTipoDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>cntTipoDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;cntTipoDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cntDescricaoCartaoDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>cntDescricaoCartaoDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;cntDescricaoCartaoDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cntDataEmissaoDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>cntDataEmissaoDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;cntDataEmissaoDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cntLancamentoIncertoDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>cntLancamentoIncertoDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;cntLancamentoIncertoDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cntQtdTotalParcelaDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>cntQtdTotalParcelaDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;cntQtdTotalParcelaDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cntParcelaAtualDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>cntParcelaAtualDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;cntParcelaAtualDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cntDataLancamentoDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>cntDataLancamentoDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;cntDataLancamentoDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cntDataPagamentoDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>cntDataPagamentoDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;cntDataPagamentoDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cntObservacaoDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>cntObservacaoDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;cntObservacaoDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cntFormaPgtoDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>cntFormaPgtoDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;cntFormaPgtoDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cntDuracaoDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>cntDuracaoDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;cntDuracaoDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;tblContaBindingSource1.Name" xml:space="preserve">
     <value>tblContaBindingSource1</value>
   </data>
@@ -347,6 +668,96 @@
   </data>
   <data name="&gt;&gt;tblCartaoTableAdapter.Type" xml:space="preserve">
     <value>Gestor.ACGestorDataSetTableAdapters.tblCartaoTableAdapter, ACGestorDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cntIdDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>cntIdDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;cntIdDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cntNomeContaDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>cntNomeContaDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;cntNomeContaDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cntObservacaoDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>cntObservacaoDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;cntObservacaoDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cntValorDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>cntValorDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;cntValorDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cntTipoDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>cntTipoDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;cntTipoDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cntFormaPgtoDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>cntFormaPgtoDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;cntFormaPgtoDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cntDescricaoCartaoDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>cntDescricaoCartaoDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;cntDescricaoCartaoDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cntDuracaoDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>cntDuracaoDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;cntDuracaoDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cntQtdTotalParcelaDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>cntQtdTotalParcelaDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;cntQtdTotalParcelaDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cntParcelaAtualDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>cntParcelaAtualDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;cntParcelaAtualDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cntDataEmissaoDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>cntDataEmissaoDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;cntDataEmissaoDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cntDataLancamentoDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>cntDataLancamentoDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;cntDataLancamentoDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cntDataPagamentoDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>cntDataPagamentoDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;cntDataPagamentoDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cntLancamentoIncertoDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>cntLancamentoIncertoDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;cntLancamentoIncertoDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Paga.Name" xml:space="preserve">
+    <value>Paga</value>
+  </data>
+  <data name="&gt;&gt;Paga.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frmContasLancadas</value>

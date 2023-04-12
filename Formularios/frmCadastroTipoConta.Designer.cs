@@ -129,6 +129,7 @@
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.lblCodigo);
             this.KeyPreview = true;
+            this.MaximizeBox = false;
             this.Name = "frmCadastroTipoConta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Tipo de Conta";

@@ -102,7 +102,7 @@ namespace Gestor
             {
                 DataTable dt = new DataTable();
                 SQLServer db = new SQLServer();
-                dt = db.SQLQuery("SELECT * FROM tblConta;");
+                dt = db.SQLQuery("SELECT * FROM tblConta WHERE cnt_Status <> 'E';");
                 db.Close();
                 return dt;
             }

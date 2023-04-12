@@ -325,7 +325,6 @@ namespace Gestor
 
             if (e.KeyCode == Keys.F4) // Comparando se a tecla que foi pressionada é igual ao parâmetro passado.
                 this.btnExcluir.PerformClick();// Chamando o evento de clique no botão.
-
         }
 
         private void cmbCartao_Leave(object sender, EventArgs e)
