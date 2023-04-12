@@ -9,8 +9,9 @@ namespace Gestor
         public frmContasLancadas()
         {
             InitializeComponent();
-
             CarregaGrid();
+            RealizaSomas("P", lbl_Pagas); 
+            RealizaSomas("A", lbl_APagar); 
         }
 
         public void CarregaGrid()
@@ -18,6 +19,24 @@ namespace Gestor
             dgv_ListagemContas.DataSource = null; // Limpando Grid para evitar ser inseridas linhas duplicadas. 
             dgv_ListagemContas.DataSource = Conta.Unit.BuscarContas(); // Carregando contas na grid.
         }
+
+        public void RealizaSomas(string status, Label labelValor)
+        {
+            double soma = 0.00;
+
+            foreach(DataGridViewRow linha in dgv_ListagemContas.Rows)
+            {
+                string celval = Convert.ToString(linha.Cells[14].Value);
+
+                if (celval == status)
+                {
+                    soma += Convert.ToDouble(linha.Cells[3].Value);
+                }    
+            }
+
+            labelValor.Text = "R$ " + soma.ToString();  
+        }
+
         private void dgv_ListagemContas_MouseDown(object sender, MouseEventArgs e) // Neste evento será inserido o código relacionado as funções do clique com o botão direito do mouse na grid.
         {
             // Teste lógico para ver se o botão direito do mouse foi clicado.
@@ -96,16 +115,6 @@ namespace Gestor
             }
         }
 
-        private void dgv_ListagemContas_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dgv_ListagemContas_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-
-        }
-
         public string RetornaIdDaLinhaSelecionada()
         {
             // Criando objeto DataDridViewRow, para podermos armazenar a linha que foi selecionada na grid.
@@ -120,9 +129,20 @@ namespace Gestor
         private void dgv_ListagemContas_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             DataGridViewRow Linha = new DataGridViewRow();
-            Linha = dgv_ListagemContas.SelectedRows[0];           
+            Linha = dgv_ListagemContas.SelectedRows[0];
             string id = Linha.Cells[0].Value.ToString();
             MessageBox.Show(id.ToString());
+        }
+
+        private void dgv_ListagemContas_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            string valueCell = dgv_ListagemContas.Rows[e.RowIndex].Cells[14].Value.ToString();
+
+            if (valueCell.Equals("P"))
+            {
+                dgv_ListagemContas.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Lime;
+            }
+            
         }
     }
 }

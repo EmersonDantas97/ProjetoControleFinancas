@@ -67,6 +67,7 @@ namespace Gestor
             this.btnSair = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.grpRegistro.SuspendLayout();
             this.grpInformacoesGerais.SuspendLayout();
             this.grpPagamento.SuspendLayout();
@@ -361,7 +362,7 @@ namespace Gestor
             this.grpInformacoesAdicionais.Enabled = false;
             this.grpInformacoesAdicionais.Location = new System.Drawing.Point(12, 355);
             this.grpInformacoesAdicionais.Name = "grpInformacoesAdicionais";
-            this.grpInformacoesAdicionais.Size = new System.Drawing.Size(634, 70);
+            this.grpInformacoesAdicionais.Size = new System.Drawing.Size(634, 69);
             this.grpInformacoesAdicionais.TabIndex = 11;
             this.grpInformacoesAdicionais.TabStop = false;
             this.grpInformacoesAdicionais.Text = "INFORMAÇÕES ADICIONAIS";
@@ -458,11 +459,23 @@ namespace Gestor
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Enabled = false;
+            this.checkBox1.Location = new System.Drawing.Point(254, 430);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(130, 17);
+            this.checkBox1.TabIndex = 23;
+            this.checkBox1.Text = "CONTA JÁ FOI PAGA";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // frmContas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(659, 436);
+            this.ClientSize = new System.Drawing.Size(659, 452);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnSair);
@@ -486,6 +499,7 @@ namespace Gestor
             this.grpInformacoesAdicionais.ResumeLayout(false);
             this.grpInformacoesAdicionais.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -529,6 +543,7 @@ namespace Gestor
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.CheckBox chkLancamentoIncerto;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 
