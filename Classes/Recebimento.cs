@@ -9,16 +9,18 @@
             public string DataRecebimento;
             public string DataLancamento;
             public string Status = "A";
+            public string Codigo;
 
             public Unit()
             {
             }
 
             // TODO: TERMINAR ROTINA DE SALVAMENTO DE RECEBIMENTO
-            public void Salvar(double valorRecebimento, string NomeRecebimento)
+            public void Salvar()
             {
+                string SQL = InsertSQL();
                 SQLServer db = new SQLServer();
-                db.SQLCommand(InsertSQL());
+                db.SQLCommand(SQL);
                 db.Close();
             }
 

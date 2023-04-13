@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gestor.Classes;
+using System;
 using System.Windows.Forms;
 
 namespace Gestor
@@ -17,6 +18,16 @@ namespace Gestor
         {
             if (e.KeyCode == Keys.Escape)
                 this.Close();
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            Recebimento.Unit r = new Recebimento.Unit();
+            r.DataLancamento = txtDataRecebimento.Text;
+            r.Valor = txtValor.Text;
+            r.Observacao = txtNomeRecebimento.Text;
+            r.DataLancamento = Util.DataAtual();
+            r.Salvar();
         }
     }
 }
